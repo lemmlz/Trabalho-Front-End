@@ -1,4 +1,4 @@
-'																		@charset "utf-8";
+@charset "utf-8";
 /* CSS Document */
 
 /******************************
@@ -98,7 +98,7 @@ a
 }
 a, a:hover, a:visited, a:active, a:link
 {
-	text-decoration: none;
+	text-decoration: none !important;
 	-webkit-font-smoothing: antialiased;
 	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
 	text-shadow: rgba(0,0,0,.01) 0 0 1px;
@@ -140,15 +140,7 @@ h1, h2, h3, h4, h5, h6
 	line-height: 1.2;
 	color: #2b2e35;
 }
-h1::selection, 
-h2::selection, 
-h3::selection, 
-h4::selection, 
-h5::selection, 
-h6::selection
-{
-	
-}
+
 img
 {
 	max-width: 100%;
@@ -632,18 +624,12 @@ section
 {
 	background-color: #00b6ff;
 	color: #ffffff;
-	webkit-transition: background-color 1s;
 	transition: background-color 1s;
 }
 
 .links-sidebar-left li:hover {
 	display: block;
 	transition: display 1s;
-}
-
-.teste {
-	background-color: blue;
-	display:none;
 }
 
 /*********************************

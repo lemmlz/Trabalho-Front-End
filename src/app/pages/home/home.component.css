@@ -1,0 +1,88 @@
+.featured
+{
+	margin-top: 61px;
+	margin-left: 253.563px;
+	background-color: #fbfbfb;
+}
+.featured_row
+{
+	margin-top: 72px;
+	
+}
+.featured_row > div[class^='col']
+{
+	margin-bottom: 60px;
+}
+.listing
+{
+	background: #fbfbfb;
+}
+
+.listing_image
+{
+	z-index: 1;
+}
+
+.listing_image_container
+{
+	height: 100%;
+	overflow: hidden;
+}
+.listing_image_container > img
+{
+	-webkit-transition: all 1600ms ease;
+	-moz-transition: all 1600ms ease;
+	-ms-transition: all 1600ms ease;
+	-o-transition: all 1600ms ease;
+	transition: all 1600ms ease;
+}
+.listing:hover .listing_image_container > img
+{
+	-webkit-transform: scale(1.2);
+	-moz-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	-o-transform: scale(1.2);
+	transform: scale(1.2);
+}
+
+.tags
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+.tag
+{
+	text-align: center;
+}
+.tag:not(:last-child)
+{
+	margin-right: 15px;
+}
+.tag a
+{
+	display: block;
+	height: 100%;
+	font-size: 120px;
+	font-weight: 700;
+	color: #ffffff;
+	text-transform: uppercase;
+	line-height: 35px;
+}
+.tag_face
+{
+	margin-left: -168px;
+}
+.tag_fea
+{
+	margin-left: -124.5px;
+}
+.tag_fch
+{
+	margin-left: -130.39px;
+}
+
+.tag_sede 
+{
+	margin-left: -168.35px;
+}

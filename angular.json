@@ -23,8 +23,9 @@
               "src/assets"
             ],
             "styles": [
-              "../src/assets/css/responsive.css",
-              "../node_modules/bootstrap/dist/css/bootstrap.min.css"
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./src/assets/css/responsive.css",
+              "./src/styles.css"
             ],
             "scripts": []
           },

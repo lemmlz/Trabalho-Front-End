@@ -19,11 +19,6 @@
 	font-size: 20px;
 }
 
-.sidebar-left a:hover 
-{
-	color: #ffffff;
-}
-
 .border-sidebar
 {
 	border-bottom: 0.5px solid #f1f1f1;
@@ -69,6 +64,11 @@
 	padding: 20px 5px;
 }
 
+.profile a:hover
+{
+	color: white;
+}
+
 .profile span
 {
 	margin-left: 5px;
@@ -82,5 +82,11 @@
 .links-sidebar-left li:hover
 {
 	background-color: #00b6ff;
+	color: #ffffff;
 	transition: background-color 1s;
+}
+
+.links-sidebar-left li:hover {
+	display: block;
+	transition: display 1s;
 }

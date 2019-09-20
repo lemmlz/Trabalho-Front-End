@@ -214,3 +214,16 @@
 {
 	color: #adc867;
 }
+
+.align-center-icons
+{
+	margin: 70% 0;
+}
+
+.notification-number
+{
+	position: absolute;
+    top: -13px;
+    right: 4px;
+    font-size: 13px;
+}

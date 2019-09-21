@@ -83,10 +83,12 @@
 {
 	background-color: #00b6ff;
 	color: #ffffff;
-	transition: background-color 1s;
+	transition: background-color 0.5s;
 }
 
-.links-sidebar-left li:hover {
-	display: block;
-	transition: display 1s;
+.links-sidebar-left span
+{
+	position: relative;
+    top: -4px;
+    left: 5px;
 }

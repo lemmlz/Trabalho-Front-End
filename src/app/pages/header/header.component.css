@@ -123,13 +123,41 @@
 	width: 100%;
 	height: 60px;
 	background: #ffffff;
+	padding-left: 253.563px;
 	border-bottom: 0.5px solid #e8e8e8;
+	transition: padding-left 0.5s;
 }
 
+.header_content_close
+{
+	padding-left: 0px !important;
+
+}
+
+.menu-button
+{
+	width: 100%;
+	height: 100%;
+}
+
+.menu-button i
+{
+	margin: 18px;
+}
+.menu-button i:hover
+{
+	cursor: pointer;
+}
+
+.menu-button a
+{
+	font-size: 17px;
+	font-weight: 500;
+	color: #2b2e35;
+}
 .main_nav
 {
 	height: 100%;
-	margin-left: 133px;
 }
 .main_nav ul
 {
@@ -139,11 +167,6 @@
 {
 	position: relative;
 	height: 100%;
-	-webkit-transition: all 200ms ease;
-	-moz-transition: all 200ms ease;
-	-ms-transition: all 200ms ease;
-	-o-transition: all 200ms ease;
-	transition: all 200ms ease;
 }
 .main_nav ul li:not(:last-of-type)
 {
@@ -156,6 +179,7 @@
 	background: #adc867;
 }
 */
+
 .main_nav ul li a
 {
 	display: block;

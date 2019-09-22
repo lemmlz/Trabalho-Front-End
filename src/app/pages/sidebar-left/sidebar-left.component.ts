@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-sidebar-left',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sidebar-left.component.css']
 })
 export class SidebarLeftComponent implements OnInit {
+
+  @Input() status:boolean;
 
   constructor() { }
 

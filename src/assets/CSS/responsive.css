@@ -27,10 +27,7 @@
 
 @media only screen and (max-width: 1600px)
 {
-	.main_nav
-	{
-		margin-left: 253.56px;
-	}
+
 }
 /************
 2. 1440px
@@ -42,14 +39,6 @@
 	{
 		padding-left: 30px;
 		padding-right: 30px;
-	}
-	.header_content
-	{
-		padding-left: 30px;
-	}
-	.main_nav
-	{
-		margin-left: 253.56px;
 	}
 	.header_list ul li:not(:last-of-type)
 	{
@@ -98,10 +87,6 @@
 	.main_nav ul li:not(:last-of-type)
 	{
 		margin-right: 13px;
-	}
-	.main_nav
-	{
-		margin-left:  253.56px;
 	}
 	.submit
 	{
@@ -190,7 +175,6 @@
 	{
 		padding-right: 30px;
 	}
-	.main_nav,
 	.submit
 	{
 		display: none;

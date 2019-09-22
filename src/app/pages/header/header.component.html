@@ -1,11 +1,12 @@
 <header class="header">
   <!-- Header Content -->
-  <div class="header_content d-flex flex-row align-items-center justify-content-end">
+  <div class="header_content d-flex flex-row align-items-center justify-content-end" [ngClass]="{'header_content_close' : status}">
+    <div class="menu-button">
+      <i class="material-icons" (click)="retractable.emit()">menu</i>
+      <a href="#">Home</a>
+    </div>
     <nav class="main_nav">
       <ul class="d-flex flex-row align-items-start justify-content-start">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About us</a></li>
-        <li><a href="listings.html">Listings</a></li>
         <li><a href="blog.html"><i class="material-icons align-center-icons">notifications</i><span class="notification-number">10</span></a></li>
         <li><a href="contact.html"><i class="material-icons align-center-icons">power_settings_new</i></a></li>
       </ul>

@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'GerenciaManutencao';
+  status:boolean;
+  retractable(){
+    if (this.status === true)
+      this.status = false;
+    else
+      this.status = true;
+  }
 }

@@ -54,7 +54,6 @@
 {
 	position: absolute;
 	top: 50%;
-	left: 50%;
 }
 .tag
 {
@@ -66,28 +65,8 @@
 }
 .tag a
 {
-	display: block;
-	height: 100%;
-	font-size: 120px;
 	font-weight: 700;
 	color: #ffffff;
 	text-transform: uppercase;
 	line-height: 35px;
-}
-.tag_face
-{
-	margin-left: -168px;
-}
-.tag_fea
-{
-	margin-left: -124.5px;
-}
-.tag_fch
-{
-	margin-left: -130.39px;
-}
-
-.tag_sede 
-{
-	margin-left: -168.35px;
 }

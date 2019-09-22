@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class SidebarLeftComponent implements OnInit {
 
-  @Input() status:boolean;
+  @Input() statusSidebarLeft:boolean;
 
   constructor() { }
 

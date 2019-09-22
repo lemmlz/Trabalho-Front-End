@@ -7,7 +7,7 @@ import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  @Input() status:boolean;
+  @Input() statusSidebarLeft:boolean;
   @Output() retractable = new EventEmitter();
 
   constructor() { }

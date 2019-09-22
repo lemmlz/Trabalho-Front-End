@@ -1,10 +1,17 @@
 .footer_bar
 {
-	margin-left: 253.563px;
+	padding-left: 253.563px;
 	z-index: 100;
 	background: #ffffff;
 	border-top: 0.5px solid #e8e8e8;
+	transition: padding-left 0.5s;
 }
+
+.footer_bar_close
+{
+	padding-left: 0px !important;
+}
+
 .footer_bar_content
 {
 	height: 52px;

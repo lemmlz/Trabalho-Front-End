@@ -7,6 +7,8 @@ import { HeaderComponent } from './pages/header/header.component';
 import { FooterComponent } from './pages/footer/footer.component';
 import { SidebarLeftComponent } from './pages/sidebar-left/sidebar-left.component';
 import { HomeComponent } from './pages/home/home.component';
+import { LaboratoriesComponent } from './pages/laboratories/laboratories.component';
+import { RouterModule } from '@angular/router/src/router_module';
 
 @NgModule({
   declarations: [
@@ -14,11 +16,12 @@ import { HomeComponent } from './pages/home/home.component';
     HeaderComponent,
     FooterComponent,
     SidebarLeftComponent,
-    HomeComponent
+    HomeComponent,
+    LaboratoriesComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

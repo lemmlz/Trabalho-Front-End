@@ -3,7 +3,7 @@
   <div class="header_content d-flex flex-row align-items-center justify-content-end" [ngClass]="{'header_content_close' : statusSidebarLeft}">
     <div class="menu-button">
       <i class="material-icons" (click)="retractable.emit()">menu</i>
-      <a href="#">Home</a>
+      <a router-link="/laboratories">Home</a>
     </div>
     <nav class="main_nav">
       <ul class="d-flex flex-row align-items-start justify-content-start">

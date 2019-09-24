@@ -27,7 +27,10 @@
 
 @media only screen and (max-width: 1600px)
 {
-
+	.tag a
+	{
+		font-size: 120px;
+	}
 }
 /************
 2. 1440px
@@ -57,6 +60,10 @@
 	.test_slide
 	{
 		padding-right: 100px;
+	}
+	.tag a
+	{
+		font-size: 120px;
 	}
 }
 

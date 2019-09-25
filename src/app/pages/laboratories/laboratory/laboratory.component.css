@@ -1,0 +1,19 @@
+.labs{
+    font-size: 30px;
+    font-weight: 700;
+	color: #ffffff;
+	text-transform: uppercase;
+    line-height: 35px;
+    text-align: center;
+}
+
+.column-lab{
+    padding: 70px 0;
+    background-color: blue;
+}
+
+.column-lab:hover {
+    background-color: #0066ff;
+    color: white;
+    transition: background-color 0.5s;
+}

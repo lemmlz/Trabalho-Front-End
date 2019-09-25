@@ -1,19 +1,3 @@
-.featured
-{
-	margin-top: 61px;
-	margin-left: 253.563px;
-	background-color: #fbfbfb;
-	transition: margin-left 0.5s;
-}
-
-.featured-close
-{
-	margin-left: 0px !important;
-}
-.featured_row
-{
-	margin-top: 72px;
-}
 .featured_row > div[class^='col']
 {
 	margin-bottom: 60px;

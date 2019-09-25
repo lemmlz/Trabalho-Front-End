@@ -9,6 +9,7 @@ import { SidebarLeftComponent } from './pages/sidebar-left/sidebar-left.componen
 import { HomeComponent } from './pages/home/home.component';
 import { LaboratoriesComponent } from './pages/laboratories/laboratories.component';
 import { RouterModule } from '@angular/router/src/router_module';
+import { LaboratoryComponent } from 'src/app/pages/laboratories/laboratory/laboratory.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { RouterModule } from '@angular/router/src/router_module';
     FooterComponent,
     SidebarLeftComponent,
     HomeComponent,
-    LaboratoriesComponent
+    LaboratoriesComponent,
+    LaboratoryComponent
   ],
   imports: [
     BrowserModule,

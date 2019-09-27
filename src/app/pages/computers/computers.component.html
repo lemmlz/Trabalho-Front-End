@@ -1,0 +1,19 @@
+<div class="featured" [ngClass]="{'featured-close' : sidebarService.status}">
+  <div class="container">
+    <div class="row">
+      <div class="col text-center section_title">
+        <h1>Suporte da Fumec</h1>
+        <h2>Selecione o computador com defeito</h2>
+      </div>
+    </div>
+    <div class="row justify-content-md-center featured_row">
+      <div *ngFor="let pc of pcs" class="col-xl-3 spacing-pcs">
+        <a [routerLink]="['/computers']" class="font-computer">
+          <div class="column-computer">
+            {{pc}}
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

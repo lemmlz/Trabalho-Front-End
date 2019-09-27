@@ -1,4 +1,10 @@
-.font-lab{
+.spacing-pcs {
+    margin: 0px;
+}
+
+/* Computer */
+
+.font-computer{
     font-size: 30px;
     font-weight: 700;
 	color: #ffffff;
@@ -7,12 +13,13 @@
     text-align: center;
 }
 
-.column-lab{
-    padding: 70px 0;
+.column-computer{
+    padding: 62.5px 0;
     background-color: blue;
+    margin-bottom: 30px;
 }
 
-.column-lab:hover {
+.column-computer:hover {
     background-color: #0066ff;
     color: white;
     transition: background-color 0.5s;

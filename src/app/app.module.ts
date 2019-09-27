@@ -10,6 +10,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { LaboratoriesComponent } from './pages/laboratories/laboratories.component';
 import { LaboratoryComponent } from 'src/app/pages/laboratories/laboratory/laboratory.component';
 import { SidebarLeftService } from './services/sidebar-left.service';
+import { ComputersComponent } from './pages/computers/computers.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { SidebarLeftService } from './services/sidebar-left.service';
     SidebarLeftComponent,
     HomeComponent,
     LaboratoriesComponent,
-    LaboratoryComponent
+    LaboratoryComponent,
+    ComputersComponent
   ],
   imports: [
     BrowserModule,

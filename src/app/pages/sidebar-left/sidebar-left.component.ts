@@ -8,8 +8,6 @@ import { SidebarLeftService } from 'src/app/services/sidebar-left.service';
 })
 export class SidebarLeftComponent implements OnInit {
 
-  @Input() statusSidebarLeft:boolean;
-
   constructor(private sidebarLeftService : SidebarLeftService) { }
 
   ngOnInit() {

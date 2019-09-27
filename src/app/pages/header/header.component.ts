@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
+import { SidebarLeftService } from 'src/app/services/sidebar-left.service';
 
 @Component({
   selector: 'app-header',
@@ -7,10 +8,7 @@ import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  @Input() statusSidebarLeft:boolean;
-  @Output() retractable = new EventEmitter();
-
-  constructor() { }
+  constructor(private sidebarLeftService : SidebarLeftService) { }
 
   ngOnInit() {
   }

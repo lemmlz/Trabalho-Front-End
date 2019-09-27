@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Laboratory } from 'src/app/pages/laboratories/laboratory/laboratory.module';
+import { SidebarLeftService } from 'src/app/services/sidebar-left.service';
 
 @Component({
   selector: 'app-laboratories',
@@ -35,7 +36,7 @@ export class LaboratoriesComponent implements OnInit {
   }
 ];
 
-  constructor() { }
+  constructor(private sidebarLeftService : SidebarLeftService) { }
 
   ngOnInit() {
   }

@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { SidebarLeftService } from '../../services/sidebar-left.service'
 
 @Component({
   selector: 'app-home',
@@ -6,10 +7,8 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
-  @Input() statusSidebarLeft:boolean;
   
-  constructor() { }
+  constructor(private sidebarService: SidebarLeftService) { }
 
   ngOnInit() {
   }

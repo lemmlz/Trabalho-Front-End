@@ -1,4 +1,4 @@
-<div class="featured" [ngClass]="{'featured-close' : statusSidebarLeft}">
+<div class="featured" [ngClass]="{'featured-close' : sidebarService.status}">
   <div class="container">
     <div class="row">
       <div class="col">
@@ -19,7 +19,7 @@
               <img src="../../assets/img/fea.jpg" alt="">
             </div>
             <div class="tags col align-self-center">
-              <div class="tag"><a href="listings.html">FACE</a></div>
+              <div class="tag"><a [routerLink]="['/laboratories']">FACE</a></div>
             </div>
           </div>
         </div>

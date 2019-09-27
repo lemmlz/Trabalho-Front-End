@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { SidebarLeftService } from 'src/app/services/sidebar-left.service';
 
 @Component({
   selector: 'app-footer',
@@ -8,9 +9,8 @@ import { Component, OnInit, Input } from '@angular/core';
 export class FooterComponent implements OnInit {
 
   currentYear:number = Date.now();
-  @Input() statusSidebarLeft:boolean;
 
-  constructor() { }
+  constructor(private sidebarLeftService : SidebarLeftService) { }
 
   ngOnInit() {
   }

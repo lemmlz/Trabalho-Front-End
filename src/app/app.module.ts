@@ -8,8 +8,8 @@ import { FooterComponent } from './pages/footer/footer.component';
 import { SidebarLeftComponent } from './pages/sidebar-left/sidebar-left.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LaboratoriesComponent } from './pages/laboratories/laboratories.component';
-import { RouterModule } from '@angular/router/src/router_module';
 import { LaboratoryComponent } from 'src/app/pages/laboratories/laboratory/laboratory.component';
+import { SidebarLeftService } from './services/sidebar-left.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +25,7 @@ import { LaboratoryComponent } from 'src/app/pages/laboratories/laboratory/labor
     BrowserModule,
     AppRoutingModule,
   ],
-  providers: [],
+  providers: [SidebarLeftService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

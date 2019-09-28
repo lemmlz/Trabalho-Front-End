@@ -60,6 +60,7 @@ span{
     border: none;
     position: absolute;
     margin-left: 10px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 :focus{
@@ -105,4 +106,40 @@ span{
     height: 100%;
     background-color: blue;
     transition: width 0.5s;
+}
+
+.required {
+    position: absolute;
+    top: 14px;
+    right: 5px;
+    color: white;
+    height: 50%;
+    border: 0.5px solid white;
+    user-select: none;
+    transition: border 0.5s, color 0.5s;
+}
+
+.required span {
+    top: 1px;
+    left: 6px;
+    position: absolute;
+}
+
+.required i{
+    position: absolute;
+    right: 0;
+    color: red;
+}
+
+.required:hover{
+    border-color: red;
+    color: red;
+}
+
+.required#usuario{
+    width: 32%;
+}
+
+.required#senha{
+    width: 30%;
 }

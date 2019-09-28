@@ -9,13 +9,25 @@
         <form class="form">
           <span>Usuário</span>
           <br>
-          <i class="material-icons md-light icon">account_circle</i>
-          <input type="text" class="text-box" placeholder="Digite seu usuário">
+          <div>
+            <i class="material-icons md-light icon">account_circle</i>
+            <input type="text" class="text-box" placeholder="Digite seu usuário">
+            <div class="required" id="usuario">
+              <span>Usuário Inválido</span>
+              <i class="material-icons">warning</i>
+            </div>
+          </div>
           <div class="line"><div class="line-select"></div></div>
           <span>Senha</span>
           <br>
-          <i class="material-icons md-light icon">https</i>
-          <input type="text" class="text-box" placeholder="Digite sua senha">
+          <div>
+            <i class="material-icons md-light icon">https</i>
+            <input type="text" class="text-box" placeholder="Digite sua senha">
+            <div class="required" id="senha">
+              <span>Senha Inválida</span>
+              <i class="material-icons">warning</i>
+            </div>
+          </div>
           <div class="line"><div class="line-select"></div></div>
           <input type="submit" method="get" value="Login" class="btn-logar">
         </form>

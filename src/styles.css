@@ -44,6 +44,11 @@ p
 	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
 	text-shadow: rgba(0,0,0,.01) 0 0 1px;
 }
+
+input{
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 500;
+}
 /*
 p a
 {

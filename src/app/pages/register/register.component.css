@@ -1,0 +1,150 @@
+span{
+    font-weight: 600;
+}
+
+.background-login {
+    background-color: #049fdf;
+    background-image: url('../../../assets/img/backgroung-login.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.full-height{
+    height: 100%;
+}
+
+.login {
+    padding: 50px;
+    background-color: white;
+}
+
+.logo-login {
+    padding: 0 18%;
+}
+
+.logo-login img{
+    width: 100px;
+}
+
+.logo-login span{
+    position: absolute;
+    top: 15%;
+    line-height: 1;
+    margin-left: 15px;
+    font-size: 35px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #009FE0;
+}
+
+.login h1 {
+    font-weight: 800;
+    text-align: center;
+}
+
+.form {
+    margin-top: 50px;
+}
+
+.icon {
+    margin: 0 10px;
+    font-size: 35px;
+    line-height: 1.5;
+    color: #d4d4d4;
+}
+
+.text-box{
+    width: 90%;
+    height: 50px;
+    border: none;
+    margin-left: 10px;
+}
+
+:focus{
+    outline: 0;
+}
+
+.text-box::placeholder{
+    color: #d4d4d4;
+}
+
+.line {
+    width: 100%;
+    height: 2px;
+    background: #d4d4d4;
+    margin-bottom: 15px;
+    /*#003ece*/
+}
+
+.btn-logar{
+    width: 100%;
+    height: 50px;
+    margin-top: 30px;
+    background-color: #009FE0;
+    border: none;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffffffff;
+    transition: background-color 0.5s;
+}
+
+.btn-logar:hover{
+    background-color: #00b6ff;
+}
+
+.register-link{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.line-select{
+    width: 0%;
+    height: 100%;
+    background-color: blue;
+    transition: width 0.5s;
+}
+
+.required {
+    position: absolute;
+    top: 14px;
+    right: 5px;
+    color: white;
+    height: 50%;
+    border: 0.5px solid white;
+    user-select: none;
+    transition: border 0.5s, color 0.5s;
+}
+
+.required span {
+    top: 1px;
+    left: 6px;
+    position: absolute;
+}
+
+.required i{
+    position: absolute;
+    right: 0;
+    color: red;
+}
+
+.required:hover{
+    border-color: red;
+    color: red;
+}
+
+.required#ra{
+    width: 25%;
+}
+
+.required#usuario{
+    width: 32%;
+}
+
+.required#senha{
+    width: 30%;
+}
+
+.required#confirmar-senha{
+    width: 30%;
+}

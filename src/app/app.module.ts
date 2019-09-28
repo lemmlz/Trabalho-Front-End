@@ -11,6 +11,7 @@ import { LaboratoriesComponent } from './pages/laboratories/laboratories.compone
 import { LaboratoryComponent } from 'src/app/pages/laboratories/laboratory/laboratory.component';
 import { SidebarLeftService } from './services/sidebar-left.service';
 import { ComputersComponent } from './pages/computers/computers.component';
+import { LoginComponent } from './pages/login/login.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ComputersComponent } from './pages/computers/computers.component';
     HomeComponent,
     LaboratoriesComponent,
     LaboratoryComponent,
-    ComputersComponent
+    ComputersComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

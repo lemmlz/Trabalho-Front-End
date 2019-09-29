@@ -76,7 +76,7 @@ span{
     /*#003ece*/
 }
 
-.btn-logar{
+.btn-register{
     width: 100%;
     height: 50px;
     margin-top: 30px;
@@ -89,7 +89,7 @@ span{
     transition: background-color 0.5s;
 }
 
-.btn-logar:hover{
+.btn-register:hover{
     background-color: #00b6ff;
 }
 

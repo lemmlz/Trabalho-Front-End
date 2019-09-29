@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
     }
   }
 
-  focusStopUser(value:string){
+  blurUser(value:string){
     if(value === '')
       this.isFocusUser = false;
   }
@@ -42,7 +42,7 @@ export class LoginComponent implements OnInit {
     }
   }
 
-  focusStopPassword(value:string){
+  blurPassword(value:string){
     if(value === '')
       this.isFocusPassword = false;
   }

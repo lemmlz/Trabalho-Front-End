@@ -1,0 +1,11 @@
+:focus{
+    outline: 0;
+}
+
+span{
+    font-weight: 600;
+}
+
+.text-box-account-access{
+    width: 90%;
+}

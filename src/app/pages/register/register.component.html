@@ -1,0 +1,63 @@
+<div class="background-account-access">
+    <div class="container full-height">
+      <div class="row justify-content-center full-height">
+        <div class="col-xl-6 my-5 account-access">
+          <div class="logo-account-access">
+              <img src="../../../assets/img/blue_logo.jpg">
+              <span>Suporte<br>FUMEC</span>
+          </div>
+          <form class="form-account-access">
+            <span>RA</span>
+            <br>
+            <div>
+              <input type="text" class="text-box-account-access" #ra placeholder="Digite seu RA"
+              (focus)="focusRA(ra.value)" (keyup)="focusRA(ra.value)" (blur)="blurRA(ra.value)">
+              <div class="required-account-access" id="ra" [ngStyle]="{'display' : validationRA ? 'block' : 'none'}">
+                <span>RA Inválido</span>
+                <i class="material-icons">warning</i>
+              </div>
+            </div>
+            <div class="line-account-access"><div class="line-select-account-access" [ngClass]="{'line-select-account-access-active' : isFocusRA}"></div></div>
+            <span>Usuário</span>
+            <br>
+            <div>
+              <input type="text" class="text-box-account-access" #user placeholder="Digite seu usuário"
+              (focus)="focusUser(user.value)" (keyup)="focusUser(user.value)" (blur)="blurUser(user.value)">
+              <div class="required-account-access" id="usuario" [ngStyle]="{'display' : validationUser ? 'block' : 'none'}">
+                <span>Usuário Inválido</span>
+                <i class="material-icons">warning</i>
+              </div>
+            </div>
+            <div class="line-account-access"><div class="line-select-account-access" [ngClass]="{'line-select-account-access-active' : isFocusUser}"></div></div>
+            <span>Senha</span>
+            <br>
+            <div>
+              <input type="password" class="text-box-account-access" #password placeholder="Digite sua senha"
+              (focus)="focusPassword(password.value)" (keyup)="focusPassword(password.value)" (blur)="blurPassword(password.value)">
+              <div class="required-account-access" id="senha" [ngStyle]="{'display' : validationPassword ? 'block' : 'none'}">
+                <span>Senha Inválida</span>
+                <i class="material-icons">warning</i>
+              </div>
+            </div>
+            <div class="line-account-access"><div class="line-select-account-access" [ngClass]="{'line-select-account-access-active' : isFocusPassword}"></div></div>
+            <span>Confirmar Senha</span>
+            <br>
+            <div>
+              <input type="password" class="text-box-account-access" #confirmPassword placeholder="Digite sua senha novamente"
+              (focus)="focusConfirmPassword(confirmPassword.value)" (keyup)="focusConfirmPassword(confirmPassword.value)" (blur)="blurConfirmPassword(confirmPassword.value)">
+              <div class="required-account-access" id="confirmar-senha" [ngStyle]="{'display' : validationConfirmPassword ? 'block' : 'none'}">
+                <span>Senha Inválida</span>
+                <i class="material-icons">warning</i>
+              </div>
+            </div>
+            <div class="line-account-access"><div class="line-select-account-access" [ngClass]="{'line-select-account-access-active' : isFocusConfirmPassword}"></div></div>
+            <input type="button" value="Registrar" class="btn-account-access" (click)="dataValidation()">
+          </form>
+          <div class="account-access-link">
+            <span>Já possui uma conta? </span><a href="/home">Login</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

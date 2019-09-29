@@ -1,39 +1,39 @@
-<div class="background-login">
+<div class="background-account-access">
   <div class="container full-height">
     <div class="row justify-content-center full-height">
-      <div class="col-xl-6 my-auto login">
-        <div class="logo-login">
+      <div class="col-xl-6 my-auto account-access">
+        <div class="logo-account-access">
             <img src="../../../assets/img/blue_logo.jpg">
             <span>Suporte<br>FUMEC</span>
         </div>
-        <form class="form">
+        <form class="form-account-access">
           <span>Usuário</span>
           <br>
           <div>
-            <i class="material-icons md-light icon" [ngClass]="{'icon-active' : isFocusUser}">account_circle</i>
-            <input type="text" class="text-box" #user placeholder="Digite seu usuário"
-            (focus)="focusUser(user.value)" (keyup)="focusUser(user.value)" (blur)="focusStopUser(user.value)">
-            <div class="required" id="usuario" [ngStyle]="{'display' : validationUser ? 'block' : 'none'}">
+            <i class="material-icons icon-account-access" [ngClass]="{'icon-account-access-active' : isFocusUser}">account_circle</i>
+            <input type="text" class="text-box-account-access" #user placeholder="Digite seu usuário"
+            (focus)="focusUser(user.value)" (keyup)="focusUser(user.value)" (blur)="blurUser(user.value)">
+            <div class="required-account-access" id="usuario" [ngStyle]="{'display' : validationUser ? 'block' : 'none'}">
               <span>Usuário Inválido</span>
               <i class="material-icons">warning</i>
             </div>
           </div>
-          <div class="line"><div class="line-select" [ngClass]="{'line-select-active' : isFocusUser}"></div></div>
+          <div class="line-account-access"><div class="line-select-account-access" [ngClass]="{'line-select-account-access-active' : isFocusUser}"></div></div>
           <span>Senha</span>
           <br>
           <div>
-            <i class="material-icons md-light icon" [ngClass]="{'icon-active' : isFocusPassword}">https</i>
-            <input type="password" class="text-box password" #password placeholder="Digite sua senha" 
-            (focus)="focusPassword(password.value)" (keyup)="focusPassword(password.value)" (blur)="focusStopPassword(password.value)">
-            <div class="required" id="senha" [ngStyle]="{'display' : validationPassword ? 'block' : 'none'}">
+            <i class="material-icons icon-account-access" [ngClass]="{'icon-account-access-active' : isFocusPassword}">https</i>
+            <input type="password" class="text-box-account-access" #password placeholder="Digite sua senha" 
+            (focus)="focusPassword(password.value)" (keyup)="focusPassword(password.value)" (blur)="blurPassword(password.value)">
+            <div class="required-account-access" id="senha" [ngStyle]="{'display' : validationPassword ? 'block' : 'none'}">
               <span>Senha Inválida</span>
               <i class="material-icons">warning</i>
             </div>
           </div>
-          <div class="line"><div class="line-select" [ngClass]="{'line-select-active' : isFocusPassword}"></div></div>
-          <input type="button" value="Login" class="btn-logar" (click)="dataValidation()">
+          <div class="line-account-access"><div class="line-select-account-access" [ngClass]="{'line-select-account-access-active' : isFocusPassword}"></div></div>
+          <input type="button" value="Login" class="btn-account-access" (click)="dataValidation()">
         </form>
-        <div class="register-link">
+        <div class="account-access-link">
           <span>Não tem uma conta? </span><a href="/home">Registrar</a>
         </div>
       </div>

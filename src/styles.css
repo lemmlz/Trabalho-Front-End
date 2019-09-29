@@ -328,7 +328,8 @@ section
 
 .account-access {
     padding: 50px;
-    background-color: white;
+	background-color: white;
+	max-width: 570px;
 }
 
 .logo-account-access {

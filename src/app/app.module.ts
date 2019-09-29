@@ -13,6 +13,7 @@ import { SidebarLeftService } from './services/sidebar-left.service';
 import { ComputersComponent } from './pages/computers/computers.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
+import { ScreenService } from './services/screen.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import { RegisterComponent } from './pages/register/register.component';
     BrowserModule,
     AppRoutingModule,
   ],
-  providers: [SidebarLeftService],
+  providers: [SidebarLeftService, ScreenService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

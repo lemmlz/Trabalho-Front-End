@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ScreenService } from 'src/app/services/screen.service';
 
 @Component({
   selector: 'app-login',
@@ -48,12 +49,10 @@ export class LoginComponent implements OnInit {
   }
 
   dataValidation(){
-    this.validationLogin = true;
-    this.validationUser = true;
-    this.validationPassword = true;
+    this.screenService.changeScreen();
   }
 
-  constructor() { }
+  constructor( private screenService : ScreenService ) { }
 
   ngOnInit() {
   }

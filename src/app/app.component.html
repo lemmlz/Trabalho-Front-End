@@ -1,9 +1,7 @@
-<!-- <app-header></app-header>
+<app-header *ngIf="!screenService.loginScreen"></app-header>
 
-<app-sidebar-left></app-sidebar-left>
+<app-sidebar-left *ngIf="!screenService.loginScreen"></app-sidebar-left>
 
 <router-outlet></router-outlet>
 
-<app-footer></app-footer> -->
-<!-- <app-login></app-login> -->
-<app-register></app-register>
+<app-footer *ngIf="!screenService.loginScreen"></app-footer>

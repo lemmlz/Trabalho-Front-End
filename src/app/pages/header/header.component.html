@@ -8,7 +8,7 @@
     <nav class="main_nav">
       <ul class="d-flex flex-row align-items-start justify-content-start">
         <li><a href="blog.html"><i class="material-icons align-center-icons">notifications</i><span class="notification-number">10</span></a></li>
-        <li><a href="../login/login.component.html"><i class="material-icons align-center-icons">power_settings_new</i></a></li>
+        <li><a [routerLink]="['/login']" (click)="login()"><i class="material-icons align-center-icons">power_settings_new</i></a></li>
       </ul>
     </nav>
   </div>

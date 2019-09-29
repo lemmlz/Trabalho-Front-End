@@ -31,10 +31,10 @@
             </div>
           </div>
           <div class="line-account-access"><div class="line-select-account-access" [ngClass]="{'line-select-account-access-active' : isFocusPassword}"></div></div>
-          <input type="button" value="Login" class="btn-account-access" (click)="dataValidation()">
+          <input [routerLink]="['/home']" type="button" value="Login" class="btn-account-access" (click)="dataValidation()">
         </form>
         <div class="account-access-link">
-          <span>Não tem uma conta? </span><a href="/home">Registrar</a>
+          <span>Não tem uma conta? </span><a [routerLink]="['/register']">Registrar</a>
         </div>
       </div>
     </div>

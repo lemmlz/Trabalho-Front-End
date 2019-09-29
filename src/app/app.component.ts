@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ScreenService } from './services/screen.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'GerenciaManutencao';
+
+  constructor(private screenService: ScreenService){ }
 }

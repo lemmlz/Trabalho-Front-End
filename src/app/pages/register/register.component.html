@@ -54,7 +54,7 @@
             <input type="button" value="Registrar" class="btn-account-access" (click)="dataValidation()">
           </form>
           <div class="account-access-link">
-            <span>Já possui uma conta? </span><a href="/home">Login</a>
+            <span>Já possui uma conta? </span><a [routerLink]="['/login']">Login</a>
           </div>
         </div>
       </div>

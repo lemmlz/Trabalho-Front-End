@@ -151,6 +151,8 @@
 
 .menu-button a
 {
+	position: absolute;
+	top: 30%;
 	font-size: 17px;
 	font-weight: 500;
 	color: #2b2e35;

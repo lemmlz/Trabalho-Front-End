@@ -10,26 +10,28 @@
           <span>Usuário</span>
           <br>
           <div>
-            <i class="material-icons md-light icon">account_circle</i>
-            <input type="text" class="text-box" placeholder="Digite seu usuário">
-            <div class="required" id="usuario">
+            <i class="material-icons md-light icon" [ngClass]="{'icon-active' : isFocusUser}">account_circle</i>
+            <input type="text" class="text-box" #user placeholder="Digite seu usuário"
+            (focus)="focusUser(user.value)" (keyup)="focusUser(user.value)" (blur)="focusStopUser(user.value)">
+            <div class="required" id="usuario" [ngStyle]="{'display' : validationUser ? 'block' : 'none'}">
               <span>Usuário Inválido</span>
               <i class="material-icons">warning</i>
             </div>
           </div>
-          <div class="line"><div class="line-select"></div></div>
+          <div class="line"><div class="line-select" [ngClass]="{'line-select-active' : isFocusUser}"></div></div>
           <span>Senha</span>
           <br>
           <div>
-            <i class="material-icons md-light icon">https</i>
-            <input type="text" class="text-box" placeholder="Digite sua senha">
-            <div class="required" id="senha">
+            <i class="material-icons md-light icon" [ngClass]="{'icon-active' : isFocusPassword}">https</i>
+            <input type="password" class="text-box password" #password placeholder="Digite sua senha" 
+            (focus)="focusPassword(password.value)" (keyup)="focusPassword(password.value)" (blur)="focusStopPassword(password.value)">
+            <div class="required" id="senha" [ngStyle]="{'display' : validationPassword ? 'block' : 'none'}">
               <span>Senha Inválida</span>
               <i class="material-icons">warning</i>
             </div>
           </div>
-          <div class="line"><div class="line-select"></div></div>
-          <input type="submit" method="get" value="Login" class="btn-logar">
+          <div class="line"><div class="line-select" [ngClass]="{'line-select-active' : isFocusPassword}"></div></div>
+          <input type="button" value="Login" class="btn-logar" (click)="dataValidation()">
         </form>
         <div class="register-link">
           <span>Não tem uma conta? </span><a href="/home">Registrar</a>

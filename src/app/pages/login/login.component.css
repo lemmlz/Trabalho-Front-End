@@ -54,6 +54,10 @@ span{
     color: #d4d4d4;
 }
 
+.icon-active{
+    color: #009FE0;
+}
+
 .text-box{
     width: 70%;
     height: 50px;
@@ -75,7 +79,6 @@ span{
     height: 2px;
     background: #d4d4d4;
     margin-bottom: 15px;
-    /*#003ece*/
 }
 
 .btn-logar{
@@ -105,6 +108,10 @@ span{
     height: 100%;
     background-color: blue;
     transition: width 0.5s;
+}
+
+.line-select-active{
+    width: 100% !important;
 }
 
 .required {

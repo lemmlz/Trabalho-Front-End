@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { SidebarLeftService } from '../../services/sidebar-left.service'
+import { ScreenService } from 'src/app/services/screen.service';
 
 @Component({
   selector: 'app-home',
@@ -8,7 +9,9 @@ import { SidebarLeftService } from '../../services/sidebar-left.service'
 })
 export class HomeComponent implements OnInit {
   
-  constructor(private sidebarService: SidebarLeftService) { }
+  constructor(private sidebarLeftService : SidebarLeftService, private screenService : ScreenService) {
+    screenService.changeScreenMain();
+  }
 
   ngOnInit() {
   }

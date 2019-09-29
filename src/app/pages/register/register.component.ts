@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ScreenService } from 'src/app/services/screen.service';
 
 @Component({
   selector: 'app-register',
@@ -88,7 +89,9 @@ export class RegisterComponent implements OnInit {
     this.validationConfirmPassword = true;
   }
 
-  constructor() { }
+  constructor( private screenService : ScreenService ) {
+    screenService.changeScreenLogin();
+   }
 
   ngOnInit() {
   }

@@ -7,7 +7,9 @@ export class ScreenService {
 
   isLoginScreen:boolean = false;
 
-  changeScreen(){ this.isLoginScreen = !this.isLoginScreen; }
+  changeScreenLogin(){ this.isLoginScreen = true; }
+
+  changeScreenMain(){ this.isLoginScreen = false; }
 
   get loginScreen(){ return this.isLoginScreen; }
 

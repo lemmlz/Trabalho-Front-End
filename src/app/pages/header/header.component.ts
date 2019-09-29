@@ -9,11 +9,7 @@ import { ScreenService } from 'src/app/services/screen.service';
 })
 export class HeaderComponent implements OnInit {
 
-  login(){
-    this.screenService.changeScreen();
-  }
-
-  constructor(private sidebarLeftService : SidebarLeftService, private screenService : ScreenService) { }
+  constructor(private sidebarLeftService : SidebarLeftService) { }
 
   ngOnInit() {
   }

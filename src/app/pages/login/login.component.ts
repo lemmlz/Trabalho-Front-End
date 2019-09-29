@@ -49,10 +49,11 @@ export class LoginComponent implements OnInit {
   }
 
   dataValidation(){
-    this.screenService.changeScreen();
   }
 
-  constructor( private screenService : ScreenService ) { }
+  constructor( private screenService : ScreenService ) {
+    screenService.changeScreenLogin();
+   }
 
   ngOnInit() {
   }

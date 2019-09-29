@@ -8,13 +8,8 @@ import { ScreenService } from 'src/app/services/screen.service';
   styleUrls: ['./sidebar-left.component.css']
 })
 export class SidebarLeftComponent implements OnInit {
-  
-  login(){
-    this.screenService.changeScreen();
-    console.log('Deu!');
-  }
 
-  constructor(private sidebarLeftService : SidebarLeftService, private screenService : ScreenService) { }
+  constructor(private sidebarLeftService : SidebarLeftService) { }
 
   ngOnInit() {
   }

@@ -8,7 +8,7 @@
     </div>
     <div class="row justify-content-md-center featured_row">
       <div *ngFor="let pc of pcs" class="col-lg-3 spacing-pcs">
-        <a [routerLink]="['/computers']" class="font-computer">
+        <a [routerLink]="['/computers']" (click)="openModal(report_modal); setComputer(pc)" class="font-computer">
           <div class="column-computer">
             {{pc}}
           </div>
@@ -17,3 +17,36 @@
     </div>
   </div>
 </div>
+
+<!-- modal report computer -->
+<ng-template #report_modal>
+  <div class="modal-header">
+    <i class="material-icons erro">error</i>
+    <h4 class="modal-title pull-left">{{computer}}</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <span>Título</span>
+    <div>
+      <input #title type="text" class="text-box-computer" placeholder="Digite o título">
+      <div class="required-account-access" id="titulo" [ngStyle]="{'display' : isEmptyTitle ? 'block' : 'none'}">
+        <span class="msg-required">Título Obrigatório</span>
+        <i class="material-icons">warning</i>
+      </div>
+    </div>
+    <span>Relate o problema</span>
+    <div>
+      <textarea #description maxlength="140" class="text-area-computer" placeholder="Digite a descrição do problema"></textarea>
+      <div class="required-account-access" id="descricao" [ngStyle]="{'display' : isEmptyDescription ? 'block' : 'none'}">
+        <span class="msg-required">Descrição Obrigatório</span>
+        <i class="material-icons">warning</i>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-primary" (click)="checkAllField(title.value,description.value)">Salvar</button>
+    <button class="btn btn-cancel" (click)="modalRef.hide()">Cancelar</button>
+  </div>
+</ng-template>

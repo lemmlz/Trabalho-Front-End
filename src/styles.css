@@ -45,9 +45,8 @@ p
 	text-shadow: rgba(0,0,0,.01) 0 0 1px;
 }
 
-input{
+input, text-area{
 	font-family: 'Montserrat', sans-serif;
-	font-weight: 500;
 }
 /*
 p a

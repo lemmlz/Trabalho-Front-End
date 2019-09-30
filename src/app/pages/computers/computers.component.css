@@ -24,3 +24,54 @@
     color: white;
     transition: background-color 0.5s;
 }
+
+/*********************
+
+        Modal
+
+**********************/
+
+.modal-header h4{
+    margin-left: 5px;
+}
+
+.modal-body span{
+    line-height: 3;
+    font-weight: 500;
+}
+
+.erro{
+    color:red;
+}
+
+.text-box-computer{
+    width: 100%;
+    height: 50px;
+    padding-left: 10px; 
+}
+
+.text-area-computer {
+    width: 100%;
+    height: 100px;
+    resize: none;
+    padding: 10px;
+}
+
+.required-account-access#titulo{
+    width: 34%;
+}
+
+.required-account-access#descricao{
+    width: 40%;
+    top: 35%;
+    position: absolute;
+    height: 24px;
+}
+
+.msg-required{
+    line-height: 1.5 !important;
+}
+
+.btn-cancel {
+    background-color: #e4e4e4;
+}

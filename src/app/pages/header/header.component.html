@@ -7,7 +7,25 @@
     </div>
     <nav class="main_nav">
       <ul class="d-flex flex-row align-items-start justify-content-start">
-        <li><a href="blog.html"><i class="material-icons align-center-icons">notifications</i><span class="notification-number">10</span></a></li>
+        <li>
+          <div class="notifications" (click)="changeStatusDropdown()">
+            <i class="material-icons align-center-icons">notifications</i>
+            <span>4</span>
+          </div>
+          <div class="dropdown">
+                <div class="dropdown-menu dropdown-notification" [ngClass]="{'dropdown-active': isDropdownActive}">
+                  <a *ngFor="let item of items" [routerLink]="['/notifications']" (click)="changeStatusDropdown()"class="dropdown-item d-flex align-items-center dropitem-property">
+                    <div class="mr-3">
+                      <i class="material-icons icon-property">error</i>
+                    </div>
+                    <div>
+                      <div class="small date-item">{{item.date | date: 'dd/MM/yyyy'}} | {{item.date | date: 'hh'}}h {{item.date | date: 'mm'}}min</div>
+                      <span class="font-weight-bold">{{item.title}} | {{item.laboratory}} - {{item.computer}}</span>
+                    </div>
+                  </a>
+                </div>
+          </div>
+        </li>
         <li><a [routerLink]="['/login']"><i class="material-icons align-center-icons">power_settings_new</i></a></li>
       </ul>
     </nav>

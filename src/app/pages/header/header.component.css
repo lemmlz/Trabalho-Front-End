@@ -185,7 +185,6 @@
 .main_nav ul li a
 {
 	display: block;
-	height: 100%;
 	line-height: 61px;
 	padding-left: 13px;
 	padding-right: 13px;
@@ -246,10 +245,57 @@
 	margin: 70% 0;
 }
 
-.notification-number
-{
+.notifications{
+	cursor: pointer;
+	user-select: none;
+}
+
+.notifications span{
 	position: absolute;
-    top: -13px;
-    right: 4px;
-    font-size: 13px;
+    top: 9px;
+    right: -13px;
+    text-align: center;
+    font-size: 11px;
+    padding: 3px 6px;
+    color: white;
+    line-height: .9;
+    font-weight: bold;
+    border-radius: 4px;
+    background-color: red;
+}
+
+.dropitem-property{
+	padding: 20px;
+	line-height: 1.5 !important;
+}
+
+.dropdown-notification{
+	display: block;
+	left:auto;
+	right: 0;
+	height: 0;
+	max-height: 255px;
+	transition: height 0.5s;
+	border: none;
+	overflow-y: scroll;
+	padding: 0;
+}
+
+.dropdown-active{
+	height: auto !important;
+	padding: .5rem 0;
+	border: 1px solid rgba(0,0,0,0.15);
+}
+
+.date-item{
+	color: #bdbdbd;
+}
+
+.icon-property{
+	font-size: 35px;
+	color: #dc3545;
+}
+
+.dropdown-menu a:hover{
+	background-color: rgb(216, 216, 216);
 }

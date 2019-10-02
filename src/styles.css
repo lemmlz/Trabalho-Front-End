@@ -297,6 +297,7 @@ section
 	margin-left: 253.563px;
 	background-color: #fbfbfb;
 	transition: margin-left 0.5s;
+	min-height: 100%;
 }
 
 .featured-close

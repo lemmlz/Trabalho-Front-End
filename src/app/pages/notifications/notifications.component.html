@@ -1,0 +1,40 @@
+<div class="featured" [ngClass]="{'featured-close' : sidebarLeftService.status}">
+  <div class="container">
+    <div class="col-xs-12">
+      <div class="box">
+        <!-- /.box-header -->
+        <div class="table-responsive">
+          <table class="table table-margin">
+            <thead class="table-head bg-danger"><tr>
+              <th>ID</th>
+              <th>Usuário</th>
+              <th>Unidade</th>
+              <th>Laboratório</th>
+              <th>Máquina</th>
+              <th>Data</th>
+              <th>Título</th>
+              <th>Descrição</th>
+              <th>Ações</th>
+            </tr></thead>
+            <tbody *ngFor="let not of notifications"><tr [ngStyle]="{'background-color' : not.bgColor}">
+              <td>{{not.id}}</td>
+              <td>{{not.name}}</td>
+              <td>{{not.college}}</td>
+              <td>{{not.laboratory}}</td>
+              <td>{{not.computer}}</td>
+              <td>{{not.date | date: 'dd/MM/yyyy hh:mm'}}</td>
+              <td>{{not.title}}</td>
+              <td>{{not.description}}</td>
+              <td>
+                <button class="btn btn-success button-size button-margin"><fa-icon [icon]="icon['1']"></fa-icon></button>
+                <button class="btn btn-danger button-size"><fa-icon [icon]="icon['0']"></fa-icon></button>
+              </td>
+            </tr>
+          </tbody></table>
+        </div>
+        <!-- /.box-body -->
+      </div>
+      <!-- /.box -->
+    </div>
+  </div>
+</div>

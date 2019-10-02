@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { AppRoutingModule } from './app-routing.module';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { SidebarLeftService } from './services/sidebar-left.service';
 import { ScreenService } from './services/screen.service';
@@ -16,6 +17,7 @@ import { LaboratoryComponent } from 'src/app/pages/laboratories/laboratory/labor
 import { ComputersComponent } from './pages/computers/computers.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
+import { NotificationsComponent } from './pages/notifications/notifications.component';
 
 
 @NgModule({
@@ -29,12 +31,14 @@ import { RegisterComponent } from './pages/register/register.component';
     LaboratoryComponent,
     ComputersComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    NotificationsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ModalModule.forRoot(),
+    FontAwesomeModule
   ],
   providers: [SidebarLeftService, ScreenService],
   bootstrap: [AppComponent]

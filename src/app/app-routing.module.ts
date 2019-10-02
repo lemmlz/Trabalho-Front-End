@@ -5,6 +5,7 @@ import { LaboratoriesComponent } from './pages/laboratories/laboratories.compone
 import { ComputersComponent } from './pages/computers/computers.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
+import { NotificationsComponent } from './pages/notifications/notifications.component';
 
 const routes: Routes = [
   { path: '', pathMatch:'full', redirectTo: 'home' },
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'computers', component: ComputersComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
+  { path: 'notifications', component: NotificationsComponent },
 ];
 
 @NgModule({

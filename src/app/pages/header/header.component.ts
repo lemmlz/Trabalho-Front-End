@@ -1,6 +1,7 @@
-import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { SidebarLeftService } from 'src/app/services/sidebar-left.service';
-import { ScreenService } from 'src/app/services/screen.service';
+import { NotificationComputers } from '../notifications/notification.module';
+import { NotificationsService } from 'src/app/services/notifications.service';
 
 @Component({
   selector: 'app-header',
@@ -9,7 +10,15 @@ import { ScreenService } from 'src/app/services/screen.service';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private sidebarLeftService : SidebarLeftService) { }
+  isDropdownActive:boolean = false;
+
+  items : NotificationComputers[] = this.notificationsService.getNotifications;
+
+  changeStatusDropdown(){
+    this.isDropdownActive = !this.isDropdownActive;
+  }
+
+  constructor(private sidebarLeftService : SidebarLeftService, private notificationsService : NotificationsService) { }
 
   ngOnInit() {
   }

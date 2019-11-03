@@ -9,11 +9,11 @@
 
 .column-lab{
     padding: 70px 0;
-    background-color: blue;
+    background-color: #0083ff;
 }
 
 .column-lab:hover {
-    background-color: #0066ff;
+    background-color: #0057da;
     color: white;
     transition: background-color 0.5s;
 }

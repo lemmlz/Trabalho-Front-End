@@ -1,19 +1,15 @@
 <div class="sidebar-left" [ngClass]="{'sidebar-left-close' : sidebarLeftService.status}">
   <div class="logo border-sidebar">
     <img src="../../assets/img/logo.png">
-    <a href="#">Suporte<br><span>FUMEC</span></a>
+    <a [routerLink]="['/home']">Suporte<br><span>FUMEC</span></a>
   </div>
   <div class="profile border-sidebar">
-    <a href="#">
-      <img src="../../assets/img/profile.jpg" class="img-circle">
-      <span>Luiz Eduardo</span>
-    </a>
+    <img src="../../assets/img/profile.jpg" class="img-circle">
+    <span>Luiz Eduardo</span>
   </div>
   <nav>
     <ul class="links-sidebar-left">
-      <a href="#"><li><i class="material-icons">notifications</i><span>Notificações</span></li></a>
-      <a href="#"><li><i class="material-icons">phone</i><span>Contatos</span></li></a>
-      <a href="#"><li><i class="material-icons">help</i><span>Ajuda</span></li></a>
+      <a [routerLink]="['/notifications']"><li><i class="material-icons">notifications</i><span>Notificações</span></li></a>
       <a [routerLink]="['/login']"><li><i class="material-icons">power_settings_new</i><span>Sair</span></li></a>
     </ul>
   </nav>

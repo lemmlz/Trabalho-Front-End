@@ -45,9 +45,8 @@ p
 	text-shadow: rgba(0,0,0,.01) 0 0 1px;
 }
 
-input{
+input, text-area{
 	font-family: 'Montserrat', sans-serif;
-	font-weight: 500;
 }
 /*
 p a
@@ -298,6 +297,7 @@ section
 	margin-left: 253.563px;
 	background-color: #fbfbfb;
 	transition: margin-left 0.5s;
+	min-height: 100%;
 }
 
 .featured-close
@@ -413,7 +413,7 @@ section
 .line-select-account-access{
     width: 0%;
     height: 100%;
-    background-color: blue;
+    background-color: #007de0;
     transition: width 0.5s;
 }
 

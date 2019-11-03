@@ -1,0 +1,35 @@
+.img-size{
+    height: 200px;
+    width: 200px;
+}
+
+.img-profile {
+    width: 200px;
+    margin: 0 auto;
+}
+
+span {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+h3 {
+    color: #009FE0;
+}
+
+.text-box-account-access {
+    background-color: #fbfbfb;
+    width: 90%;
+    font-size: 17px;
+}
+
+.button-size{
+    height: 30px;
+    width: 30px;
+    padding: 0;
+    float: right;
+}
+
+.button-margin{
+    margin: 10px 0;
+}

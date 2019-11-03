@@ -1,0 +1,43 @@
+<div class="featured" [ngClass]="{'featured-close' : sidebarLeftService.status}">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col section_title">
+        <div class="img-profile">
+          <img src="../../assets/img/profile.jpg" class="img-circle img-size">
+        </div>
+      </div>
+      <div class="w-100"></div>
+      <div class="col text-center mt-3">
+        <h2>Luiz Eduardo Martins Maciel</h2>
+        <br>
+        <h3>Ciência da Computação</h3>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col">
+          <span>Usuário</span>
+          <br>
+          <div>
+            <input type="text" class="text-box-account-access" #user value="teste" disabled
+            (focus)="focusUser(user.value)" (keyup)="focusUser(user.value)" (blur)="blurUser(user.value)">
+            <div class="required-account-access" id="usuario" [ngStyle]="{'display' : validationUser ? 'block' : 'none'}">
+              <span>Usuário Inválido</span>
+              <i class="material-icons">warning</i>
+            </div>
+            <button class="btn btn-success button-size button-margin"><i class="fas fa-pen"></i></button>
+          </div>
+          <span>Senha</span>
+          <br>
+          <div>
+            <input type="text" class="text-box-account-access" #user value="**********************" disabled
+            (focus)="focusUser(user.value)" (keyup)="focusUser(user.value)" (blur)="blurUser(user.value)">
+            <div class="required-account-access" id="usuario" [ngStyle]="{'display' : validationUser ? 'block' : 'none'}">
+              <span>Usuário Inválido</span>
+              <i class="material-icons">warning</i>
+            </div>
+            <button class="btn btn-success button-size button-margin"><i class="fas fa-pen"></i></button>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

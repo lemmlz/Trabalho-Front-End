@@ -1,6 +1,5 @@
 import { Component, OnInit, TemplateRef } from '@angular/core';
 import { SidebarLeftService } from 'src/app/services/sidebar-left.service';
-import { ScreenService } from 'src/app/services/screen.service';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 
 @Component({
@@ -17,8 +16,7 @@ export class ComputersComponent implements OnInit {
   isEmptyTitle : boolean = false;
   isEmptyDescription : boolean = false;
 
-  constructor(private sidebarLeftService : SidebarLeftService, private screenService : ScreenService, private modalService : BsModalService) {
-    screenService.changeScreenMain();
+  constructor(private sidebarLeftService : SidebarLeftService, private modalService : BsModalService) {
    }
 
   openModal(template: TemplateRef<any>) {

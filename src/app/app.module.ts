@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { AppRoutingModule } from './app-routing.module';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { SidebarLeftService } from './services/sidebar-left.service';
 import { ScreenService } from './services/screen.service';
@@ -40,7 +39,6 @@ import { ProfileComponent } from './pages/profile/profile.component';
     BrowserModule,
     AppRoutingModule,
     ModalModule.forRoot(),
-    FontAwesomeModule
   ],
   providers: [SidebarLeftService, ScreenService],
   bootstrap: [AppComponent]

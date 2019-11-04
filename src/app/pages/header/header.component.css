@@ -143,6 +143,7 @@
 .menu-button i
 {
 	margin: 18px;
+	font-size: 23px;
 }
 .menu-button i:hover
 {
@@ -240,9 +241,13 @@
 	color: #adc867;
 }
 
-.align-center-icons
+.font-icon {
+	font-size: 20px;
+}
+
+.notification-icon
 {
-	margin: 70% 0;
+	margin: 110% 0;
 }
 
 .notifications{
@@ -261,7 +266,7 @@
     line-height: .9;
     font-weight: bold;
     border-radius: 4px;
-    background-color: red;
+    background-color: #dc3545;
 }
 
 .dropitem-property{
@@ -291,7 +296,7 @@
 	color: #bdbdbd;
 }
 
-.icon-property{
+.exclamation-icon{
 	font-size: 35px;
 	color: #dc3545;
 }

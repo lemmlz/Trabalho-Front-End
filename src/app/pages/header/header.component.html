@@ -2,21 +2,21 @@
   <!-- Header Content -->
   <div class="header_content d-flex flex-row align-items-center justify-content-end" [ngClass]="{'header_content_close' : sidebarLeftService.status}">
     <div class="menu-button">
-      <i class="material-icons" (click)="sidebarLeftService.changeStatus()">menu</i>
+      <i class="fas fa-bars" (click)="sidebarLeftService.changeStatus()"></i>
       <a [routerLink]="['/home']">Home</a>
     </div>
     <nav class="main_nav">
       <ul class="d-flex flex-row align-items-start justify-content-start">
         <li>
           <div class="notifications" (click)="changeStatusDropdown()">
-            <i class="material-icons align-center-icons">notifications</i>
+            <i class="fas fa-bell notification-icon font-icon"></i>
             <span>4</span>
           </div>
           <div class="dropdown">
                 <div class="dropdown-menu dropdown-notification" [ngClass]="{'dropdown-active': isDropdownActive}">
                   <a *ngFor="let item of items" [routerLink]="['/notifications']" (click)="changeStatusDropdown()"class="dropdown-item d-flex align-items-center dropitem-property">
                     <div class="mr-3">
-                      <i class="material-icons icon-property">error</i>
+                      <i class="fas fa-exclamation-circle exclamation-icon"></i>
                     </div>
                     <div>
                       <div class="small date-item">{{item.date | date: 'dd/MM/yyyy'}} | {{item.date | date: 'hh'}}h {{item.date | date: 'mm'}}min</div>
@@ -26,7 +26,7 @@
                 </div>
           </div>
         </li>
-        <li><a [routerLink]="['/login']"><i class="material-icons align-center-icons">power_settings_new</i></a></li>
+        <li><a [routerLink]="['/login']"><i class="fas fa-power-off font-icon"></i></a></li>
       </ul>
     </nav>
   </div>

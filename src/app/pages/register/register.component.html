@@ -14,7 +14,7 @@
               (focus)="focusRA(ra.value)" (keyup)="focusRA(ra.value)" (blur)="blurRA(ra.value)">
               <div class="required-account-access" id="ra" [ngStyle]="{'display' : validationRA ? 'block' : 'none'}">
                 <span>RA Inválido</span>
-                <i class="material-icons">warning</i>
+                <i class="fas fa-exclamation-triangle"></i>
               </div>
             </div>
             <div class="line-account-access"><div class="line-select-account-access" [ngClass]="{'line-select-account-access-active' : isFocusRA}"></div></div>
@@ -25,7 +25,7 @@
               (focus)="focusUser(user.value)" (keyup)="focusUser(user.value)" (blur)="blurUser(user.value)">
               <div class="required-account-access" id="usuario" [ngStyle]="{'display' : validationUser ? 'block' : 'none'}">
                 <span>Usuário Inválido</span>
-                <i class="material-icons">warning</i>
+                <i class="fas fa-exclamation-triangle"></i>
               </div>
             </div>
             <div class="line-account-access"><div class="line-select-account-access" [ngClass]="{'line-select-account-access-active' : isFocusUser}"></div></div>
@@ -36,7 +36,7 @@
               (focus)="focusPassword(password.value)" (keyup)="focusPassword(password.value)" (blur)="blurPassword(password.value)">
               <div class="required-account-access" id="senha" [ngStyle]="{'display' : validationPassword ? 'block' : 'none'}">
                 <span>Senha Inválida</span>
-                <i class="material-icons">warning</i>
+                <i class="fas fa-exclamation-triangle"></i>
               </div>
             </div>
             <div class="line-account-access"><div class="line-select-account-access" [ngClass]="{'line-select-account-access-active' : isFocusPassword}"></div></div>
@@ -47,7 +47,7 @@
               (focus)="focusConfirmPassword(confirmPassword.value)" (keyup)="focusConfirmPassword(confirmPassword.value)" (blur)="blurConfirmPassword(confirmPassword.value)">
               <div class="required-account-access" id="confirmar-senha" [ngStyle]="{'display' : validationConfirmPassword ? 'block' : 'none'}">
                 <span>Senha Inválida</span>
-                <i class="material-icons">warning</i>
+                <i class="fas fa-exclamation-triangle"></i>
               </div>
             </div>
             <div class="line-account-access"><div class="line-select-account-access" [ngClass]="{'line-select-account-access-active' : isFocusConfirmPassword}"></div></div>

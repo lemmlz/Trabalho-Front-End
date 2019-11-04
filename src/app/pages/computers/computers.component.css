@@ -40,8 +40,9 @@
     font-weight: 500;
 }
 
-.erro{
-    color:red;
+.exclamation-icon{
+    color:#dc3545;
+    font-size: 24px;
 }
 
 .text-box-computer{

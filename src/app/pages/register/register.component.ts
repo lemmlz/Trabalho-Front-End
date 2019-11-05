@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ScreenService } from 'src/app/services/screen.service';
+import { Course } from 'src/app/model/course.module';
 
 @Component({
   selector: 'app-register',
@@ -7,33 +8,51 @@ import { ScreenService } from 'src/app/services/screen.service';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-
+  teste: Course[] = [
+    {id: 1, name: "teste"},
+    {id: 2, name: "asd"}
+  ];
   //Validation
-  validationRA:boolean = false;
+  validationName:boolean = false;
+  validationCourse:boolean = false;
   validationUser:boolean = false;
   validationPassword:boolean = false;
   validationConfirmPassword:boolean = false;
   validationRegister:boolean = false;
 
   //FocusTextBox
-  isFocusRA:boolean = false;
+  isFocusName:boolean = false;
+  isFocusCourse:boolean = false;
   isFocusUser:boolean = false;
   isFocusPassword:boolean = false;
   isFocusConfirmPassword:boolean = false;
 
-  focusRA(value:string){
-    this.isFocusRA = true;
+
+
+  focusName(value:string){
+    this.isFocusName = true;
     if(value != ''){
-      this.validationRA = false;
+      this.validationName = false;
     } else {
       if(this.validationRegister)
-        this.validationRA = true;
+        this.validationName = true;
     }
   }
 
-  blurRA(value:string){
+  blurName(value:string){
     if(value === '')
-      this.isFocusRA = false;
+      this.isFocusName = false;
+  }
+
+  focusCourse(){
+    this.isFocusCourse = true;
+  }
+
+  blurCourse(value:string){
+    console.log(value);
+    
+    if (value === 'default')
+      this.isFocusCourse = false;
   }
 
   focusUser(value:string){
@@ -83,13 +102,14 @@ export class RegisterComponent implements OnInit {
 
   dataValidation(){
     this.validationRegister = true;
-    this.validationRA = true;
+    this.validationName = true;
+    this.validationCourse = true;
     this.validationUser = true;
     this.validationPassword = true;
     this.validationConfirmPassword = true;
   }
 
-  constructor( private screenService : ScreenService ) {
+  constructor( private screenService : ScreenService) {
     screenService.changeScreenLogin();
    }
 

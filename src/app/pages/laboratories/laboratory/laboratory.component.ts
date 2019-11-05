@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Laboratory } from './laboratory.module';
+import { Laboratory } from '../../../model/laboratory.module';
 
 @Component({
   selector: 'app-laboratory',

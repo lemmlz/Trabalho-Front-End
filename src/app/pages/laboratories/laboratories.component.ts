@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Laboratory } from 'src/app/pages/laboratories/laboratory/laboratory.module';
+import { Laboratory } from 'src/app/model/laboratory.module';
 import { SidebarLeftService } from 'src/app/services/sidebar-left.service';
 import { ScreenService } from 'src/app/services/screen.service';
 

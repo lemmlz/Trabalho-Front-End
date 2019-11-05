@@ -428,6 +428,10 @@ section
     width: 100% !important;
 }
 
+.input-cursor {
+	cursor: text;
+}
+
 .required-account-access {
     position: absolute;
     top: 14px;
@@ -458,8 +462,12 @@ section
     color: #dc3545;
 }
 
-.required-account-access#ra{
-	width: 25%;
+.required-account-access#nome{
+	width: 30%;
+}
+
+.required-account-access#curso{
+	width: 30%;
 }
 
 .required-account-access#usuario{

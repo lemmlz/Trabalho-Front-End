@@ -7,20 +7,34 @@
               <span>Suporte<br>FUMEC</span>
           </div>
           <form class="form-account-access">
-            <span>RA</span>
+            <span>Nome</span>
             <br>
-            <div>
-              <input type="text" class="text-box-account-access" #ra placeholder="Digite seu RA"
-              (focus)="focusRA(ra.value)" (keyup)="focusRA(ra.value)" (blur)="blurRA(ra.value)">
-              <div class="required-account-access" id="ra" [ngStyle]="{'display' : validationRA ? 'block' : 'none'}">
-                <span>RA Inválido</span>
+            <div class="input-cursor" (click)="name.focus()">
+              <input type="text" class="text-box-account-access" #name placeholder="Digite seu nome"
+              (focus)="focusName(name.value)" (keyup)="focusName(name.value)" (blur)="blurName(name.value)">
+              <div class="required-account-access" id="nome" [ngStyle]="{'display' : validationName ? 'block' : 'none'}">
+                <span>Nome Inválido</span>
                 <i class="fas fa-exclamation-triangle"></i>
               </div>
             </div>
-            <div class="line-account-access"><div class="line-select-account-access" [ngClass]="{'line-select-account-access-active' : isFocusRA}"></div></div>
-            <span>Usuário</span>
+            <div class="line-account-access"><div class="line-select-account-access" [ngClass]="{'line-select-account-access-active' : isFocusName}"></div></div>
+            <span>Curso</span>
             <br>
             <div>
+              <select class="text-box-account-access" name="curso" #course (focus)="focusCourse()" (blur)="blurCourse(course.value);">
+                <!-- <option value="default">Selecione uma opção</option> -->
+                <option *ngFor="let c of teste" value="curso">{{c.name}}</option>
+              </select>
+              <div class="required-account-access" id="curso" [ngStyle]="{'display' : validationCourse ? 'block' : 'none'}">
+                <span>Curso Inválido</span>
+                <i class="fas fa-exclamation-triangle"></i>
+              </div>
+            </div>
+            <div class="line-account-access"><div class="line-select-account-access" [ngClass]="{'line-select-account-access-active' : isFocusCourse}"></div></div>
+            <br>
+            <span>Usuário</span>
+            <br>
+            <div class="input-cursor" (click)="user.focus()">
               <input type="text" class="text-box-account-access" #user placeholder="Digite seu usuário"
               (focus)="focusUser(user.value)" (keyup)="focusUser(user.value)" (blur)="blurUser(user.value)">
               <div class="required-account-access" id="usuario" [ngStyle]="{'display' : validationUser ? 'block' : 'none'}">
@@ -31,7 +45,7 @@
             <div class="line-account-access"><div class="line-select-account-access" [ngClass]="{'line-select-account-access-active' : isFocusUser}"></div></div>
             <span>Senha</span>
             <br>
-            <div>
+            <div class="input-cursor" (click)="password.focus()">
               <input type="password" class="text-box-account-access" #password placeholder="Digite sua senha"
               (focus)="focusPassword(password.value)" (keyup)="focusPassword(password.value)" (blur)="blurPassword(password.value)">
               <div class="required-account-access" id="senha" [ngStyle]="{'display' : validationPassword ? 'block' : 'none'}">
@@ -42,7 +56,7 @@
             <div class="line-account-access"><div class="line-select-account-access" [ngClass]="{'line-select-account-access-active' : isFocusPassword}"></div></div>
             <span>Confirmar Senha</span>
             <br>
-            <div>
+            <div class="input-cursor" (click)="confirmPassword.focus()">
               <input type="password" class="text-box-account-access" #confirmPassword placeholder="Digite sua senha novamente"
               (focus)="focusConfirmPassword(confirmPassword.value)" (keyup)="focusConfirmPassword(confirmPassword.value)" (blur)="blurConfirmPassword(confirmPassword.value)">
               <div class="required-account-access" id="confirmar-senha" [ngStyle]="{'display' : validationConfirmPassword ? 'block' : 'none'}">

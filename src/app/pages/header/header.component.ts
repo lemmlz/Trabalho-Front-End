@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SidebarLeftService } from 'src/app/services/sidebar-left.service';
-import { NotificationComputers } from '../notifications/notification.module';
+import { NotificationComputers } from '../../model/notification.module';
 import { NotificationsService } from 'src/app/services/notifications.service';
 
 @Component({

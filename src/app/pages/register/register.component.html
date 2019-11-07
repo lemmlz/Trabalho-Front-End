@@ -22,8 +22,8 @@
             <br>
             <div>
               <select class="text-box-account-access" name="curso" #course (focus)="focusCourse()" (blur)="blurCourse(course.value);">
-                <!-- <option value="default">Selecione uma opção</option> -->
-                <option *ngFor="let c of teste" value="curso">{{c.name}}</option>
+                <option value="default">Selecione uma opção</option>
+                <option *ngFor="let course of listCourse" [value]="course.name">{{course.name}}</option>
               </select>
               <div class="required-account-access" id="curso" [ngStyle]="{'display' : validationCourse ? 'block' : 'none'}">
                 <span>Curso Inválido</span>

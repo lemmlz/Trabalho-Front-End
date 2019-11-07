@@ -18,6 +18,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { NotificationsComponent } from './pages/notifications/notifications.component';
 import { ProfileComponent } from './pages/profile/profile.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -39,6 +40,7 @@ import { ProfileComponent } from './pages/profile/profile.component';
     BrowserModule,
     AppRoutingModule,
     ModalModule.forRoot(),
+    HttpClientModule
   ],
   providers: [SidebarLeftService, ScreenService],
   bootstrap: [AppComponent]

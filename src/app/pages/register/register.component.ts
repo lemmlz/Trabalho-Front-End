@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ScreenService } from 'src/app/services/screen.service';
+import { CourseService } from 'src/app/services/course.service';
 import { Course } from 'src/app/model/course.module';
 
 @Component({
@@ -8,99 +9,94 @@ import { Course } from 'src/app/model/course.module';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-  teste: Course[] = [
-    {id: 1, name: "teste"},
-    {id: 2, name: "asd"}
-  ];
+
+  listCourse: Course[];
+
   //Validation
-  validationName:boolean = false;
-  validationCourse:boolean = false;
-  validationUser:boolean = false;
-  validationPassword:boolean = false;
-  validationConfirmPassword:boolean = false;
-  validationRegister:boolean = false;
+  validationName: boolean = false;
+  validationCourse: boolean = false;
+  validationUser: boolean = false;
+  validationPassword: boolean = false;
+  validationConfirmPassword: boolean = false;
+  validationRegister: boolean = false;
 
   //FocusTextBox
-  isFocusName:boolean = false;
-  isFocusCourse:boolean = false;
-  isFocusUser:boolean = false;
-  isFocusPassword:boolean = false;
-  isFocusConfirmPassword:boolean = false;
+  isFocusName: boolean = false;
+  isFocusCourse: boolean = false;
+  isFocusUser: boolean = false;
+  isFocusPassword: boolean = false;
+  isFocusConfirmPassword: boolean = false;
 
-
-
-  focusName(value:string){
+  focusName(value: string) {
     this.isFocusName = true;
-    if(value != ''){
+    if (value != '') {
       this.validationName = false;
     } else {
-      if(this.validationRegister)
+      if (this.validationRegister)
         this.validationName = true;
     }
   }
 
-  blurName(value:string){
-    if(value === '')
+  blurName(value: string) {
+    if (value === '')
       this.isFocusName = false;
   }
 
-  focusCourse(){
+  focusCourse() {
     this.isFocusCourse = true;
   }
 
-  blurCourse(value:string){
-    console.log(value);
-    
+  blurCourse(value: string) {
     if (value === 'default')
       this.isFocusCourse = false;
   }
 
-  focusUser(value:string){
+  focusUser(value: string) {
     this.isFocusUser = true;
-    if(value != ''){
+    if (value != '') {
       this.validationUser = false;
     } else {
-      if(this.validationRegister)
+      if (this.validationRegister)
         this.validationUser = true;
     }
   }
 
-  blurUser(value:string){
-    if(value === '')
+  blurUser(value: string) {
+    if (value === '')
       this.isFocusUser = false;
   }
 
-  focusPassword(value:string){
+  focusPassword(value: string) {
     this.isFocusPassword = true;
-    if(value != ''){
+    if (value != '') {
       this.validationPassword = false;
     } else {
-      if(this.validationRegister)
+      if (this.validationRegister)
         this.validationPassword = true;
     }
   }
 
-  blurPassword(value:string){
-    if(value === '')
+  blurPassword(value: string) {
+    if (value === '')
       this.isFocusPassword = false;
   }
-  
-  focusConfirmPassword(value:string){
+
+  focusConfirmPassword(value: string) {
     this.isFocusConfirmPassword = true;
-    if(value != ''){
+    if (value != '') {
       this.validationConfirmPassword = false;
     } else {
-      if(this.validationRegister)
+      if (this.validationRegister)
         this.validationConfirmPassword = true;
     }
   }
 
-  blurConfirmPassword(value:string){
-    if(value === '')
+  blurConfirmPassword(value: string) {
+    if (value === '')
       this.isFocusConfirmPassword = false;
   }
 
-  dataValidation(){
+  dataValidation() {
     this.validationRegister = true;
     this.validationName = true;
     this.validationCourse = true;
@@ -109,11 +105,16 @@ export class RegisterComponent implements OnInit {
     this.validationConfirmPassword = true;
   }
 
-  constructor( private screenService : ScreenService) {
+  constructor(private screenService: ScreenService, private courseService: CourseService) {
     screenService.changeScreenLogin();
-   }
+  }
 
   ngOnInit() {
+    this.courseService.getListCourse().subscribe(
+      courses => {
+        this.listCourse = courses;
+      }
+    );
   }
 
 }

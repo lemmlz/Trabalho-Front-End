@@ -6,13 +6,13 @@
               <img src="../../../assets/img/blue_logo.jpg">
               <span>Suporte<br>FUMEC</span>
           </div>
-          <form class="form-account-access">
+          <form (ngSubmit)="onSubmit()" #registerForm="ngForm" class="form-account-access">
             <span>Nome</span>
             <br>
-            <div class="input-cursor" (click)="name.focus()">
-              <input type="text" class="text-box-account-access" #name placeholder="Digite seu nome"
-              (focus)="focusName(name.value)" (keyup)="focusName(name.value)" (blur)="blurName(name.value)">
-              <div class="required-account-access" id="nome" [ngStyle]="{'display' : validationName ? 'block' : 'none'}">
+            <div class="input-cursor">
+              <input type="text" class="text-box-account-access" [(ngModel)]="objStudent.name" name="name" #name="ngModel" placeholder="Digite seu nome"
+              (focus)="focusName()" (blur)="blurName(name.value)" required>
+              <div class="required-account-access" id="nome" [hidden]="name.valid || name.pristine">
                 <span>Nome Inválido</span>
                 <i class="fas fa-exclamation-triangle"></i>
               </div>
@@ -21,11 +21,12 @@
             <span>Curso</span>
             <br>
             <div>
-              <select class="text-box-account-access" name="curso" #course (focus)="focusCourse()" (blur)="blurCourse(course.value);">
+              <select class="text-box-account-access" [(ngModel)]="objStudent.course" name="course" #course="ngModel" 
+              (focus)="focusCourse()" (blur)="blurCourse(course.value)" required>
                 <option value="default">Selecione uma opção</option>
                 <option *ngFor="let course of listCourse" [value]="course.name">{{course.name}}</option>
               </select>
-              <div class="required-account-access" id="curso" [ngStyle]="{'display' : validationCourse ? 'block' : 'none'}">
+              <div class="required-account-access" id="curso" [hidden]="validCourse(course.value) || course.pristine">
                 <span>Curso Inválido</span>
                 <i class="fas fa-exclamation-triangle"></i>
               </div>
@@ -34,10 +35,10 @@
             <br>
             <span>Usuário</span>
             <br>
-            <div class="input-cursor" (click)="user.focus()">
-              <input type="text" class="text-box-account-access" #user placeholder="Digite seu usuário"
-              (focus)="focusUser(user.value)" (keyup)="focusUser(user.value)" (blur)="blurUser(user.value)">
-              <div class="required-account-access" id="usuario" [ngStyle]="{'display' : validationUser ? 'block' : 'none'}">
+            <div class="input-cursor">
+              <input type="text" class="text-box-account-access" [(ngModel)]="objStudent.user" name="user" #user="ngModel" placeholder="Digite seu usuário"
+              (focus)="focusUser()" (blur)="blurUser(user.value)" required>
+              <div class="required-account-access" id="usuario" [hidden]="user.valid || user.pristine">
                 <span>Usuário Inválido</span>
                 <i class="fas fa-exclamation-triangle"></i>
               </div>
@@ -45,10 +46,10 @@
             <div class="line-account-access"><div class="line-select-account-access" [ngClass]="{'line-select-account-access-active' : isFocusUser}"></div></div>
             <span>Senha</span>
             <br>
-            <div class="input-cursor" (click)="password.focus()">
-              <input type="password" class="text-box-account-access" #password placeholder="Digite sua senha"
-              (focus)="focusPassword(password.value)" (keyup)="focusPassword(password.value)" (blur)="blurPassword(password.value)">
-              <div class="required-account-access" id="senha" [ngStyle]="{'display' : validationPassword ? 'block' : 'none'}">
+            <div class="input-cursor">
+              <input type="password" class="text-box-account-access" [(ngModel)]="objStudent.password" name="password" #password="ngModel" placeholder="Digite sua senha"
+              (focus)="focusPassword()" (blur)="blurPassword(password.value)" required>
+              <div class="required-account-access" id="senha" [hidden]="(password.valid || password.pristine) && validationPassword">
                 <span>Senha Inválida</span>
                 <i class="fas fa-exclamation-triangle"></i>
               </div>
@@ -56,16 +57,16 @@
             <div class="line-account-access"><div class="line-select-account-access" [ngClass]="{'line-select-account-access-active' : isFocusPassword}"></div></div>
             <span>Confirmar Senha</span>
             <br>
-            <div class="input-cursor" (click)="confirmPassword.focus()">
-              <input type="password" class="text-box-account-access" #confirmPassword placeholder="Digite sua senha novamente"
-              (focus)="focusConfirmPassword(confirmPassword.value)" (keyup)="focusConfirmPassword(confirmPassword.value)" (blur)="blurConfirmPassword(confirmPassword.value)">
-              <div class="required-account-access" id="confirmar-senha" [ngStyle]="{'display' : validationConfirmPassword ? 'block' : 'none'}">
+            <div class="input-cursor">
+              <input type="password" class="text-box-account-access" [(ngModel)]="validPasswordValue" name="confirmPassword" #confirmPassword="ngModel" placeholder="Digite sua senha novamente"
+              (focus)="focusConfirmPassword()" (blur)="blurConfirmPassword(confirmPassword.value)" required>
+              <div class="required-account-access" id="confirmar-senha" [hidden]="(confirmPassword.valid || confirmPassword.pristine) && validationPassword">
                 <span>Senha Inválida</span>
                 <i class="fas fa-exclamation-triangle"></i>
               </div>
             </div>
             <div class="line-account-access"><div class="line-select-account-access" [ngClass]="{'line-select-account-access-active' : isFocusConfirmPassword}"></div></div>
-            <input type="button" value="Registrar" class="btn-account-access" (click)="dataValidation()">
+            <input type="submit" [disabled]="!registerForm.form.valid || !validCourse(course.value)" value="Registrar" class="btn-account-access">
           </form>
           <div class="account-access-link">
             <span>Já possui uma conta? </span><a [routerLink]="['/login']">Login</a>

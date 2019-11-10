@@ -408,6 +408,15 @@ section
     transition: background-color 0.5s;
 }
 
+.btn-account-access[disabled]{
+	background-color: #bdbdbd;
+	color: graytext;
+}
+
+.btn-account-access[disabled]:hover{
+	background-color: #bdbdbd;
+}
+
 .btn-account-access:hover{
     background-color: #00b6ff;
 }

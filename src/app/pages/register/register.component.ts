@@ -13,7 +13,7 @@ export class RegisterComponent implements OnInit {
 
   listCourse: Course[];
 
-  objStudent : Person = new Person();
+  objPerson : Person = new Person();
   validPasswordValue : string;
 
   //Validation
@@ -81,7 +81,7 @@ export class RegisterComponent implements OnInit {
   }
 
   onSubmit() {
-    if (this.objStudent.password != this.validPasswordValue) {
+    if (this.objPerson.password != this.validPasswordValue) {
       this.validationPassword = false;
     } else {
       
@@ -98,7 +98,7 @@ export class RegisterComponent implements OnInit {
         this.listCourse = courses;
       }
     );
-    this.objStudent.course = 'default';
+    this.objPerson.course = 'default';
   }
 
 }

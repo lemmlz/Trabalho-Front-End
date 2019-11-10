@@ -6,14 +6,14 @@
             <img src="../../../assets/img/blue_logo.jpg">
             <span>Suporte<br>FUMEC</span>
         </div>
-        <form class="form-account-access">
+        <form (ngSubmit)="onSubmit()" #loginForm="ngForm" class="form-account-access">
           <span>Usuário</span>
           <br>
           <div>
             <i class="fas fa-user icon-account-access" [ngClass]="{'icon-account-access-active' : isFocusUser}"></i>
-            <input type="text" class="text-box-account-access" #user placeholder="Digite seu usuário"
-            (focus)="focusUser(user.value)" (keyup)="focusUser(user.value)" (blur)="blurUser(user.value)">
-            <div class="required-account-access" id="usuario" [ngStyle]="{'display' : validationUser ? 'block' : 'none'}">
+            <input type="text" class="text-box-account-access" [(ngModel)]="objPerson.user" name="user" #user="ngModel" placeholder="Digite seu usuário"
+            (focus)="focusUser()" (blur)="blurUser(user.value)" required>
+            <div class="required-account-access" id="usuario" [hidden]="true">
               <span>Usuário Inválido</span>
               <i class="fas fa-exclamation-triangle"></i>
             </div>
@@ -23,15 +23,15 @@
           <br>
           <div>
             <i class="fas fa-lock icon-account-access" [ngClass]="{'icon-account-access-active' : isFocusPassword}"></i>
-            <input type="password" class="text-box-account-access" #password placeholder="Digite sua senha" 
-            (focus)="focusPassword(password.value)" (keyup)="focusPassword(password.value)" (blur)="blurPassword(password.value)">
-            <div class="required-account-access" id="senha" [ngStyle]="{'display' : validationPassword ? 'block' : 'none'}">
+            <input type="password" class="text-box-account-access" [(ngModel)]="objPerson.password" name="password" #password="ngModel" placeholder="Digite sua senha" 
+            (focus)="focusPassword()" (blur)="blurPassword(password.value)">
+            <div class="required-account-access" id="senha" [hidden]="true">
               <span>Senha Inválida</span>
               <i class="fas fa-exclamation-triangle"></i>
             </div>
           </div>
           <div class="line-account-access"><div class="line-select-account-access" [ngClass]="{'line-select-account-access-active' : isFocusPassword}"></div></div>
-          <input [routerLink]="['/home']" type="button" value="Login" class="btn-account-access" (click)="dataValidation()">
+          <input type="submit" value="Login" class="btn-account-access">
         </form>
         <div class="account-access-link">
           <span>Não tem uma conta? </span><a [routerLink]="['/register']">Registrar</a>

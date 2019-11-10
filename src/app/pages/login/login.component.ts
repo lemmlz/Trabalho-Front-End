@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ScreenService } from 'src/app/services/screen.service';
+import { Person } from 'src/app/model/person.module';
 
 @Component({
   selector: 'app-login',
@@ -7,6 +8,8 @@ import { ScreenService } from 'src/app/services/screen.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+
+  objPerson : Person = new Person();
 
   //Validation
   validationUser:boolean = false;
@@ -18,37 +21,25 @@ export class LoginComponent implements OnInit {
   isFocusPassword:boolean = false;
 
   //Validation functions
-  focusUser(value:string){
+  focusUser(){
     this.isFocusUser = true;
-    if(value != ''){
-      this.validationUser = false;
-    } else {
-      if(this.validationLogin)
-        this.validationUser = true;
-    }
   }
 
   blurUser(value:string){
-    if(value === '')
+    if(value === undefined || value === '')
       this.isFocusUser = false;
   }
 
-  focusPassword(value:string){
+  focusPassword(){
     this.isFocusPassword = true;
-    if(value != ''){
-      this.validationPassword = false;
-    } else {
-      if(this.validationLogin)
-        this.validationPassword = true;
-    }
   }
 
   blurPassword(value:string){
-    if(value === '')
+    if(value === undefined || value === '')
       this.isFocusPassword = false;
   }
 
-  dataValidation(){
+  onSubmit(){
   }
 
   constructor( private screenService : ScreenService ) {

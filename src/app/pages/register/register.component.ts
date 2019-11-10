@@ -3,6 +3,8 @@ import { ScreenService } from 'src/app/services/screen.service';
 import { CourseService } from 'src/app/services/course.service';
 import { Course } from 'src/app/model/course.module';
 import { Person } from 'src/app/model/person.module';
+import { PersonService } from 'src/app/services/person.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -18,6 +20,7 @@ export class RegisterComponent implements OnInit {
 
   //Validation
   validationPassword: boolean = true;
+  validationUser: boolean = true;
 
   //FocusTextBox
   isFocusName: boolean = false;
@@ -53,6 +56,7 @@ export class RegisterComponent implements OnInit {
 
   focusUser() {
     this.isFocusUser = true;
+    this.validationUser = true;
   }
 
   blurUser(value: string) {
@@ -84,11 +88,25 @@ export class RegisterComponent implements OnInit {
     if (this.objPerson.password != this.validPasswordValue) {
       this.validationPassword = false;
     } else {
-      
+      this.personService.getListPerson().subscribe(
+        listPerson => {
+          for(let person of listPerson){
+            if (person.user === this.objPerson.user) {
+              this.validationUser = false;
+              return;
+            }
+          }
+          if (this.validationUser) {
+            this.personService.addPerson(this.objPerson);
+            localStorage['token'] = 'xptoh26410x5=50';
+            this.router.navigate(['/home']);
+          }
+        }
+      );
     }
   }
 
-  constructor(private screenService: ScreenService, private courseService: CourseService) {
+  constructor(private screenService: ScreenService, private courseService: CourseService, private personService : PersonService, private router : Router) {
     screenService.changeScreenLogin();
   }
 

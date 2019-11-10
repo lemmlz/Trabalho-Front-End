@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ScreenService } from 'src/app/services/screen.service';
 import { Person } from 'src/app/model/person.module';
+import { PersonService } from 'src/app/services/person.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -12,9 +14,8 @@ export class LoginComponent implements OnInit {
   objPerson : Person = new Person();
 
   //Validation
-  validationUser:boolean = false;
-  validationPassword:boolean = false;
-  validationLogin:boolean = false;
+  validationUser:boolean = true;
+  validationPassword:boolean = true;
 
   //FocusTextBox
   isFocusUser:boolean = false;
@@ -23,6 +24,8 @@ export class LoginComponent implements OnInit {
   //Validation functions
   focusUser(){
     this.isFocusUser = true;
+    this.validationUser = true;
+    this.validationPassword = true;
   }
 
   blurUser(value:string){
@@ -32,6 +35,8 @@ export class LoginComponent implements OnInit {
 
   focusPassword(){
     this.isFocusPassword = true;
+    this.validationUser = true;
+    this.validationPassword = true;
   }
 
   blurPassword(value:string){
@@ -40,9 +45,22 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit(){
+    this.personService.getListPerson().subscribe(
+      listPerson => {
+        for (let person of listPerson) {
+          if (person.user === this.objPerson.user && person.password === this.objPerson.password) {
+              localStorage['token'] = 'xptoh26410x5=50';
+              this.router.navigate(['/home']);
+              return;
+          }
+        }
+        this.validationUser = false;
+        this.validationPassword = false;
+      }
+    );
   }
 
-  constructor( private screenService : ScreenService ) {
+  constructor(private screenService : ScreenService, private personService : PersonService, private router : Router) {
     screenService.changeScreenLogin();
    }
 

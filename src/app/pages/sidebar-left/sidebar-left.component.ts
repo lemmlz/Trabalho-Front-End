@@ -10,6 +10,10 @@ export class SidebarLeftComponent implements OnInit {
 
   constructor(private sidebarLeftService : SidebarLeftService) { }
 
+  logOff(){
+    localStorage.removeItem('token');
+  }
+
   ngOnInit() {
   }
 

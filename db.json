@@ -1,32 +1,41 @@
 {
-    "course": [
-        {
-            "id" : 1,
-            "name" : "Administração"
-        },
-        {
-            "id" : 2,
-            "name" : "Arquitetura"
-        },
-        {
-            "id" : 3,
-            "name" : "Biomedicina"
-        },
-        {
-            "id" : 4,
-            "name" : "Ciência da Computação"
-        },
-        {
-            "id" : 5,
-            "name" : "Design de moda"
-        },
-        {
-            "id" : 6,
-            "name" : "Direito"
-        },
-        {
-            "id" : 7,
-            "name" : "Engenharia"
-        }
-    ]
+  "course": [
+    {
+      "id": 1,
+      "name": "Administração"
+    },
+    {
+      "id": 2,
+      "name": "Arquitetura"
+    },
+    {
+      "id": 3,
+      "name": "Biomedicina"
+    },
+    {
+      "id": 4,
+      "name": "Ciência da Computação"
+    },
+    {
+      "id": 5,
+      "name": "Design de moda"
+    },
+    {
+      "id": 6,
+      "name": "Direito"
+    },
+    {
+      "id": 7,
+      "name": "Engenharia"
+    }
+  ],
+  "person": [
+    {
+      "course": "",
+      "name": "Administrador",
+      "user": "adm",
+      "password": "adm",
+      "id": 1
+    }
+  ]
 }

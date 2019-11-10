@@ -13,7 +13,7 @@
             <i class="fas fa-user icon-account-access" [ngClass]="{'icon-account-access-active' : isFocusUser}"></i>
             <input type="text" class="text-box-account-access" [(ngModel)]="objPerson.user" name="user" #user="ngModel" placeholder="Digite seu usuário"
             (focus)="focusUser()" (blur)="blurUser(user.value)" required>
-            <div class="required-account-access" id="usuario" [hidden]="true">
+            <div class="required-account-access" id="usuario" [hidden]="validationUser">
               <span>Usuário Inválido</span>
               <i class="fas fa-exclamation-triangle"></i>
             </div>
@@ -25,7 +25,7 @@
             <i class="fas fa-lock icon-account-access" [ngClass]="{'icon-account-access-active' : isFocusPassword}"></i>
             <input type="password" class="text-box-account-access" [(ngModel)]="objPerson.password" name="password" #password="ngModel" placeholder="Digite sua senha" 
             (focus)="focusPassword()" (blur)="blurPassword(password.value)">
-            <div class="required-account-access" id="senha" [hidden]="true">
+            <div class="required-account-access" id="senha" [hidden]="validationPassword">
               <span>Senha Inválida</span>
               <i class="fas fa-exclamation-triangle"></i>
             </div>

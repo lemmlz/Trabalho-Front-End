@@ -38,7 +38,7 @@
             <div class="input-cursor">
               <input type="text" class="text-box-account-access" [(ngModel)]="objPerson.user" name="user" #user="ngModel" placeholder="Digite seu usuário"
               (focus)="focusUser()" (blur)="blurUser(user.value)" required>
-              <div class="required-account-access" id="usuario" [hidden]="user.valid || user.pristine">
+              <div class="required-account-access" id="usuario" [hidden]="(user.valid || user.pristine) && validationUser">
                 <span>Usuário Inválido</span>
                 <i class="fas fa-exclamation-triangle"></i>
               </div>
@@ -66,7 +66,7 @@
               </div>
             </div>
             <div class="line-account-access"><div class="line-select-account-access" [ngClass]="{'line-select-account-access-active' : isFocusConfirmPassword}"></div></div>
-            <input type="submit" value="Registrar" class="btn-account-access">
+            <input type="submit" [disabled]="!registerForm.form.valid || !validCourse(course.value)" value="Registrar" class="btn-account-access">
           </form>
           <div class="account-access-link">
             <span>Já possui uma conta? </span><a [routerLink]="['/login']">Login</a>

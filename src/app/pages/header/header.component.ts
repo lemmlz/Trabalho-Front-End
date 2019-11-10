@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { SidebarLeftService } from 'src/app/services/sidebar-left.service';
 import { NotificationComputers } from '../../model/notification.module';
 import { NotificationsService } from 'src/app/services/notifications.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -18,7 +19,11 @@ export class HeaderComponent implements OnInit {
     this.isDropdownActive = !this.isDropdownActive;
   }
 
-  constructor(private sidebarLeftService : SidebarLeftService, private notificationsService : NotificationsService) { }
+  logOff(){
+    localStorage.removeItem('token');
+  }
+
+  constructor(private sidebarLeftService : SidebarLeftService, private notificationsService : NotificationsService, private router : Router) { }
 
   ngOnInit() {
   }

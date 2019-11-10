@@ -33,3 +33,16 @@ h3 {
 .button-margin{
     margin: 10px 0;
 }
+
+.button-edit{
+    height: 30px;
+    width: 30px;
+    padding: 0;
+    top: 150px;
+    position: absolute;
+    right: 10px;
+}
+
+.margin-profile{
+    margin-top: 80px;
+}

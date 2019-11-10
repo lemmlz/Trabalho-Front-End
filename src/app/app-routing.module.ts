@@ -7,7 +7,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { NotificationsComponent } from './pages/notifications/notifications.component';
 import { ProfileComponent } from './pages/profile/profile.component';
-import { AuthGuard } from './services/authetication.service';
+import { AuthGuard } from './services/authentication.service';
 
 const routes: Routes = [
   { path: '', pathMatch:'full', redirectTo: '/home' },

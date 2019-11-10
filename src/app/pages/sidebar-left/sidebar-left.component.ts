@@ -12,6 +12,7 @@ export class SidebarLeftComponent implements OnInit {
 
   logOff(){
     localStorage.removeItem('token');
+    localStorage.removeItem('login');
   }
 
   ngOnInit() {

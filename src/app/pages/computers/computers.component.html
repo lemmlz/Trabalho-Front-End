@@ -33,7 +33,7 @@
       <input #title type="text" class="text-box-computer" placeholder="Digite o título">
       <div class="required-account-access" id="titulo" [ngStyle]="{'display' : isEmptyTitle ? 'block' : 'none'}">
         <span class="msg-required">Título Obrigatório</span>
-        <i class="material-icons">warning</i>
+        <i class="fas fa-exclamation-triangle"></i>
       </div>
     </div>
     <span>Relate o problema</span>
@@ -41,7 +41,7 @@
       <textarea #description maxlength="140" class="text-area-computer" placeholder="Digite a descrição do problema"></textarea>
       <div class="required-account-access" id="descricao" [ngStyle]="{'display' : isEmptyDescription ? 'block' : 'none'}">
         <span class="msg-required">Descrição Obrigatório</span>
-        <i class="material-icons">warning</i>
+        <i class="fas fa-exclamation-triangle"></i>
       </div>
     </div>
   </div>

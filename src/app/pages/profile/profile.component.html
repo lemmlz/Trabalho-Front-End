@@ -1,43 +1,60 @@
 <div class="featured" [ngClass]="{'featured-close' : sidebarLeftService.status}">
   <div class="container">
     <div class="row justify-content-center">
-      <div class="col section_title">
+      <div class="col margin-profile">
         <div class="img-profile">
           <img src="../../assets/img/profile.jpg" class="img-circle img-size">
+          <button (click)="openModal(profile_modal)" class="btn button-edit"><i class="fas fa-pen"></i></button>
         </div>
       </div>
       <div class="w-100"></div>
       <div class="col text-center mt-3">
-        <h2>Luiz Eduardo Martins Maciel</h2>
+        <h2>{{objPerson.name}}</h2>
         <br>
-        <h3>Ciência da Computação</h3>
-      </div>
-    </div>
-    <div class="row mt-5">
-      <div class="col">
-          <span>Usuário</span>
-          <br>
-          <div>
-            <input type="text" class="text-box-account-access" #user value="teste" disabled
-            (focus)="focusUser(user.value)" (keyup)="focusUser(user.value)" (blur)="blurUser(user.value)">
-            <div class="required-account-access" id="usuario" [ngStyle]="{'display' : validationUser ? 'block' : 'none'}">
-              <span>Usuário Inválido</span>
-              <i class="material-icons">warning</i>
-            </div>
-            <button class="btn btn-success button-size button-margin"><i class="fas fa-pen"></i></button>
-          </div>
-          <span>Senha</span>
-          <br>
-          <div>
-            <input type="text" class="text-box-account-access" #user value="**********************" disabled
-            (focus)="focusUser(user.value)" (keyup)="focusUser(user.value)" (blur)="blurUser(user.value)">
-            <div class="required-account-access" id="usuario" [ngStyle]="{'display' : validationUser ? 'block' : 'none'}">
-              <span>Usuário Inválido</span>
-              <i class="material-icons">warning</i>
-            </div>
-            <button class="btn btn-success button-size button-margin"><i class="fas fa-pen"></i></button>
-          </div>
+        <h3>{{objPerson.course}}</h3>
       </div>
     </div>
   </div>
 </div>
+
+<ng-template #profile_modal>
+  <div class="modal-header">
+    <i class="fas fa-exclamation-circle exclamation-icon"></i>
+    <h4 class="modal-title pull-left">{{objPerson.user}}</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <span>Nome</span>
+    <div>
+      <input [(ngModel)]="objPerson.name" name="name" #name="ngModel" type="text" class="text-box-profile" disabled>
+      <div class="required-account-access" id="nome" [ngStyle]="{'display' : isEmptyTitle ? 'block' : 'none'}">
+        <span class="msg-required">Nome Obrigatório</span>
+        <i class="fas fa-exclamation-triangle"></i>
+      </div>
+      <button class="btn btn-success button-size button-margin"><i class="fas fa-pen"></i></button>
+      <button class="btn btn-success button-size button-margin" [ngStyle]="{'display' : 'none'}"><i class="fas fa-check"></i></button>
+    </div>
+    <span>Curso</span>
+    <div>
+      <input [(ngModel)]="objPerson.course" name="course" #course="ngModel" type="text" class="text-box-profile" disabled>
+      <div class="required-account-access" id="curso" [ngStyle]="{'display' : isEmptyTitle ? 'block' : 'none'}">
+        <span class="msg-required">Título Obrigatório</span>
+        <i class="fas fa-exclamation-triangle"></i>
+      </div>
+      <button class="btn btn-success button-size button-margin"><i class="fas fa-pen"></i></button>
+      <button class="btn btn-success button-size button-margin" [ngStyle]="{'display' : 'none'}"><i class="fas fa-check"></i></button>
+    </div>
+    <span>Senha</span>
+    <div>
+      <input #password type="text" class="text-box-profile" value="***************" disabled>
+      <div class="required-account-access" id="senha" [ngStyle]="{'display' : isEmptyTitle ? 'block' : 'none'}">
+        <span class="msg-required">Título Obrigatório</span>
+        <i class="fas fa-exclamation-triangle"></i>
+      </div>
+      <button class="btn btn-success button-size button-margin"><i class="fas fa-pen"></i></button>
+      <button class="btn btn-success button-size button-margin" [ngStyle]="{'display' : 'none'}"><i class="fas fa-check"></i></button>
+    </div>
+  </div>
+</ng-template>

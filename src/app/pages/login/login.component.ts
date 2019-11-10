@@ -21,6 +21,10 @@ export class LoginComponent implements OnInit {
   isFocusUser:boolean = false;
   isFocusPassword:boolean = false;
 
+  constructor(private screenService : ScreenService, private personService : PersonService, private router : Router) {
+    screenService.changeScreenLogin();
+   }
+
   //Validation functions
   focusUser(){
     this.isFocusUser = true;
@@ -50,6 +54,7 @@ export class LoginComponent implements OnInit {
         for (let person of listPerson) {
           if (person.user === this.objPerson.user && person.password === this.objPerson.password) {
               localStorage['token'] = 'xptoh26410x5=50';
+              localStorage['login'] = person.user;
               this.router.navigate(['/home']);
               return;
           }
@@ -59,10 +64,6 @@ export class LoginComponent implements OnInit {
       }
     );
   }
-
-  constructor(private screenService : ScreenService, private personService : PersonService, private router : Router) {
-    screenService.changeScreenLogin();
-   }
 
   ngOnInit() {
   }

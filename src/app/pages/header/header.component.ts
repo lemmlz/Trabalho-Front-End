@@ -21,6 +21,7 @@ export class HeaderComponent implements OnInit {
 
   logOff(){
     localStorage.removeItem('token');
+    localStorage.removeItem('login');
   }
 
   constructor(private sidebarLeftService : SidebarLeftService, private notificationsService : NotificationsService, private router : Router) { }

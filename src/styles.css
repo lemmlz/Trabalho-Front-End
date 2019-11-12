@@ -445,11 +445,11 @@ section
     position: absolute;
     top: 14px;
     right: 5px;
-    color: white;
+    color: #ffffff00;
     height: 50%;
-    border: 0.5px solid white;
+    border: 0.5px solid #ffffff00;
     user-select: none;
-    transition: border 0.5s, color 0.5s;
+    transition: border 0.5s, color 0.5s, background-color 0.5s;
 }
 
 .required-account-access span {
@@ -468,7 +468,8 @@ section
 
 .required-account-access:hover{
     border-color: #dc3545;
-    color: #dc3545;
+	color: #dc3545;
+	background-color: white;
 }
 
 .required-account-access#nome{
@@ -518,9 +519,15 @@ section
 }
 
 .text-box-profile{
-    width: 90%;
-    height: 50px;
+    width: 80%;
+	height: 50px;
+	background-color: #ffffff;
     padding-left: 10px; 
+}
+
+.text-box-profile[disabled]{
+	border: none;
+	background-color: #ffffff;
 }
 
 .text-area-computer {
@@ -535,17 +542,6 @@ section
 }
 
 .required-account-access#descricao{
-    width: 40%;
-    top: 35%;
-    position: absolute;
-    height: 24px;
-}
-
-.required-account-access#nome{
-    width: 34%;
-}
-
-.required-account-access#curso{
     width: 40%;
     top: 35%;
     position: absolute;

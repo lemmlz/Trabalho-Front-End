@@ -3,13 +3,12 @@
     <div class="row justify-content-center">
       <div class="col margin-profile">
         <div class="img-profile">
-          <img src="../../assets/img/profile.jpg" class="img-circle img-size">
-          <button (click)="openModal(profile_modal)" class="btn button-edit"><i class="fas fa-pen"></i></button>
+          <img [src]="objPerson.image" class="img-circle img-size">
         </div>
       </div>
       <div class="w-100"></div>
       <div class="col text-center mt-3">
-        <h2>{{objPerson.name}}</h2>
+        <h2>{{objPerson.name}} <i (click)="openModal(profile_modal)" class="fas fa-info-circle btn-information"></i></h2> 
         <br>
         <h3>{{objPerson.course}}</h3>
       </div>
@@ -26,35 +25,48 @@
     </button>
   </div>
   <div class="modal-body">
+    <span>Imagem</span>
+    <div>
+      <input [(ngModel)]="objPerson.image" name="image" #image="ngModel" type="text" class="text-box-profile" placeholder="Digite o novo endereço da imagem" [disabled]="!imageEdit">
+      <i [hidden]="!(image.value == '')" class="fas fa-exclamation-triangle required-icon"></i>
+      <button class="btn btn-success button-size button-margin" [hidden]="imageEdit" (click)="editImage()"><i class="fas fa-pen"></i></button>
+      <button class="btn btn-danger button-size button-margin" [hidden]="!imageEdit"><i class="fas fa-times"></i></button>
+      <button class="btn btn-success button-size button-margin button-margin-right" [hidden]="!imageEdit"><i class="fas fa-check"></i></button>
+      
+    </div>
     <span>Nome</span>
     <div>
-      <input [(ngModel)]="objPerson.name" name="name" #name="ngModel" type="text" class="text-box-profile" disabled>
-      <div class="required-account-access" id="nome" [ngStyle]="{'display' : isEmptyTitle ? 'block' : 'none'}">
-        <span class="msg-required">Nome Obrigatório</span>
-        <i class="fas fa-exclamation-triangle"></i>
-      </div>
+      <input [(ngModel)]="objPerson.name" name="name" #name="ngModel" type="text" class="text-box-profile" placeholder="Digite o novo nome" [disabled]="true">
+      <i [hidden]="!(name.value == '')" class="fas fa-exclamation-triangle required-icon"></i>
       <button class="btn btn-success button-size button-margin"><i class="fas fa-pen"></i></button>
-      <button class="btn btn-success button-size button-margin" [ngStyle]="{'display' : 'none'}"><i class="fas fa-check"></i></button>
+      <button class="btn btn-danger button-size button-margin" [hidden]="true"><i class="fas fa-times"></i></button>
+      <button class="btn btn-success button-size button-margin button-margin-right" [hidden]="true"><i class="fas fa-check"></i></button>
     </div>
     <span>Curso</span>
     <div>
-      <input [(ngModel)]="objPerson.course" name="course" #course="ngModel" type="text" class="text-box-profile" disabled>
-      <div class="required-account-access" id="curso" [ngStyle]="{'display' : isEmptyTitle ? 'block' : 'none'}">
-        <span class="msg-required">Título Obrigatório</span>
-        <i class="fas fa-exclamation-triangle"></i>
-      </div>
+      <select [(ngModel)]="objPerson.course" name="course" #course="ngModel" class="text-box-profile" [disabled]="true">
+        <option value="default">Selecione uma opção</option>
+        <option *ngFor="let course of listCourse" [value]="course.name">{{course.name}}</option>
+      </select>
+      <i [hidden]="!(course.value == 'default')" class="fas fa-exclamation-triangle required-icon"></i>
       <button class="btn btn-success button-size button-margin"><i class="fas fa-pen"></i></button>
-      <button class="btn btn-success button-size button-margin" [ngStyle]="{'display' : 'none'}"><i class="fas fa-check"></i></button>
+      <button class="btn btn-danger button-size button-margin" [hidden]="true"><i class="fas fa-times"></i></button>
+      <button class="btn btn-success button-size button-margin button-margin-right" [hidden]="true"><i class="fas fa-check"></i></button>
     </div>
     <span>Senha</span>
     <div>
-      <input #password type="text" class="text-box-profile" value="***************" disabled>
-      <div class="required-account-access" id="senha" [ngStyle]="{'display' : isEmptyTitle ? 'block' : 'none'}">
-        <span class="msg-required">Título Obrigatório</span>
-        <i class="fas fa-exclamation-triangle"></i>
-      </div>
+      <input [(ngModel)]="objPerson.password" name="password" #password="ngModel" type="password" class="text-box-profile" placeholder="Digite a nova senha" [disabled]="true">
+      <i [hidden]="!(password.value == '') || password.pristine" class="fas fa-exclamation-triangle required-icon"></i>
       <button class="btn btn-success button-size button-margin"><i class="fas fa-pen"></i></button>
-      <button class="btn btn-success button-size button-margin" [ngStyle]="{'display' : 'none'}"><i class="fas fa-check"></i></button>
+    </div>
+    <div [hidden]="true">
+      <span>Confirmar Senha</span>
+      <div>
+        <input #confirmPassword type="password" class="text-box-profile" placeholder="Digite a senha novamente">
+        <i class="fas fa-exclamation-triangle required-icon"></i>
+        <button class="btn btn-danger button-size button-margin"><i class="fas fa-times"></i></button>
+        <button class="btn btn-success button-size button-margin button-margin-right"><i class="fas fa-check"></i></button>
+      </div>
     </div>
   </div>
 </ng-template>

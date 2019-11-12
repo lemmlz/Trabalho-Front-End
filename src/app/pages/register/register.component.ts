@@ -97,8 +97,10 @@ export class RegisterComponent implements OnInit {
             }
           }
           if (this.validationUser) {
+            this.objPerson.image = '../../assets/img/profile.jpg';
             this.personService.addPerson(this.objPerson);
             localStorage['token'] = 'xptoh26410x5=50';
+            localStorage['login'] = this.objPerson.user;
             this.router.navigate(['/home']);
           }
         }

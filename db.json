@@ -31,10 +31,11 @@
   ],
   "person": [
     {
-      "course": "",
+      "course": "Administração",
       "name": "Administrador",
       "user": "adm",
       "password": "adm",
+      "image": "../../assets/img/profile.jpg",
       "id": 1
     }
   ]

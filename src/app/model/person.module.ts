@@ -3,6 +3,7 @@ export class Person {
     public course: string
     public user: string
     public password: string
+    public image: string
 
     constructor() {  }
   

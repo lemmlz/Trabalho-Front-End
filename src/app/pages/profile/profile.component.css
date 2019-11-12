@@ -34,6 +34,18 @@ h3 {
     margin: 10px 0;
 }
 
+.button-margin-right{
+    margin-right: 15px;
+}
+
+.required-icon{
+    position: absolute;
+	font-size: 18px;
+	right: 105px;
+	top: 15px;
+    color: #dc3545;
+}
+
 .button-edit{
     height: 30px;
     width: 30px;
@@ -41,6 +53,12 @@ h3 {
     top: 150px;
     position: absolute;
     right: 10px;
+}
+
+.btn-information{
+    font-size: 25px;
+    color: #3e3737;
+    cursor: pointer;
 }
 
 .margin-profile{

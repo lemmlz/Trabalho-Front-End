@@ -20,7 +20,7 @@
   <div class="modal-header">
     <i class="fas fa-exclamation-circle exclamation-icon"></i>
     <h4 class="modal-title pull-left">{{objPerson.user}}</h4>
-    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide(); modalIsHidded();">
       <span aria-hidden="true">&times;</span>
     </button>
   </div>
@@ -29,29 +29,29 @@
     <div>
       <input [(ngModel)]="objPerson.image" name="image" #image="ngModel" type="text" class="text-box-profile" placeholder="Digite o novo endereço da imagem" [disabled]="!imageEdit">
       <i [hidden]="!(image.value == '')" class="fas fa-exclamation-triangle required-icon"></i>
-      <button class="btn btn-success button-size button-margin" [hidden]="imageEdit" (click)="editImage()"><i class="fas fa-pen"></i></button>
-      <button class="btn btn-danger button-size button-margin" [hidden]="!imageEdit"><i class="fas fa-times"></i></button>
+      <button class="btn btn-success button-size button-margin" [hidden]="imageEdit" (click)="editImage(image.name)"><i class="fas fa-pen"></i></button>
+      <button class="btn btn-danger button-size button-margin" [hidden]="!imageEdit" (click)="confirm"><i class="fas fa-times"></i></button>
       <button class="btn btn-success button-size button-margin button-margin-right" [hidden]="!imageEdit"><i class="fas fa-check"></i></button>
       
     </div>
     <span>Nome</span>
     <div>
-      <input [(ngModel)]="objPerson.name" name="name" #name="ngModel" type="text" class="text-box-profile" placeholder="Digite o novo nome" [disabled]="true">
+      <input [(ngModel)]="objPerson.name" name="name" #name="ngModel" type="text" class="text-box-profile" placeholder="Digite o novo nome" [disabled]="!nameEdit">
       <i [hidden]="!(name.value == '')" class="fas fa-exclamation-triangle required-icon"></i>
-      <button class="btn btn-success button-size button-margin"><i class="fas fa-pen"></i></button>
-      <button class="btn btn-danger button-size button-margin" [hidden]="true"><i class="fas fa-times"></i></button>
-      <button class="btn btn-success button-size button-margin button-margin-right" [hidden]="true"><i class="fas fa-check"></i></button>
+      <button class="btn btn-success button-size button-margin" [hidden]="nameEdit" (click)="editImage(name.name)"><i class="fas fa-pen"></i></button>
+      <button class="btn btn-danger button-size button-margin" [hidden]="!nameEdit"><i class="fas fa-times"></i></button>
+      <button class="btn btn-success button-size button-margin button-margin-right" [hidden]="!nameEdit"><i class="fas fa-check"></i></button>
     </div>
     <span>Curso</span>
     <div>
-      <select [(ngModel)]="objPerson.course" name="course" #course="ngModel" class="text-box-profile" [disabled]="true">
+      <select [(ngModel)]="objPerson.course" name="course" #course="ngModel" class="text-box-profile" [disabled]="!courseEdit">
         <option value="default">Selecione uma opção</option>
         <option *ngFor="let course of listCourse" [value]="course.name">{{course.name}}</option>
       </select>
       <i [hidden]="!(course.value == 'default')" class="fas fa-exclamation-triangle required-icon"></i>
-      <button class="btn btn-success button-size button-margin"><i class="fas fa-pen"></i></button>
-      <button class="btn btn-danger button-size button-margin" [hidden]="true"><i class="fas fa-times"></i></button>
-      <button class="btn btn-success button-size button-margin button-margin-right" [hidden]="true"><i class="fas fa-check"></i></button>
+      <button class="btn btn-success button-size button-margin" [hidden]="courseEdit" (click)="editImage(course.name)"><i class="fas fa-pen"></i></button>
+      <button class="btn btn-danger button-size button-margin" [hidden]="!courseEdit"><i class="fas fa-times"></i></button>
+      <button class="btn btn-success button-size button-margin button-margin-right" [hidden]="!courseEdit"><i class="fas fa-check"></i></button>
     </div>
     <span>Senha</span>
     <div>

@@ -5,8 +5,8 @@
   </div>
   <div class="profile border-sidebar">
     <a [routerLink]="['/profile']">
-      <img src="../../assets/img/profile.jpg" class="img-circle img-size">
-      <span>Luiz Eduardo</span>
+      <img [src]="personService.person.image" class="img-circle img-size">
+      <span>{{personService.person.name}}</span>
     </a>
   </div>
   <nav>

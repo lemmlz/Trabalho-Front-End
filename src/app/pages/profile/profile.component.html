@@ -30,7 +30,7 @@
       <input [(ngModel)]="objPerson.image" name="image" #image="ngModel" type="text" class="text-box-profile" placeholder="Digite o novo endereço da imagem" [disabled]="!imageEdit">
       <i [hidden]="!(image.value == '')" class="fas fa-exclamation-triangle required-icon"></i>
       <button class="btn btn-success button-size button-margin" [hidden]="imageEdit" (click)="editPerson(image.name)"><i class="fas fa-pen"></i></button>
-      <button class="btn btn-danger button-size button-margin" [hidden]="!imageEdit" (click)="cancelChange()"><i class="fas fa-times"></i></button>
+      <button class="btn btn-danger button-size button-margin" [hidden]="!imageEdit" (click)="cancelChange(image.name)"><i class="fas fa-times"></i></button>
       <button class="btn btn-success button-size button-margin button-margin-right" [hidden]="!imageEdit" (click)="saveChage(image.name)" [disabled]="(image.value == '')"><i class="fas fa-check"></i></button>
       
     </div>
@@ -39,7 +39,7 @@
       <input [(ngModel)]="objPerson.name" name="name" #name="ngModel" type="text" class="text-box-profile" placeholder="Digite o novo nome" [disabled]="!nameEdit">
       <i [hidden]="!(name.value == '')" class="fas fa-exclamation-triangle required-icon"></i>
       <button class="btn btn-success button-size button-margin" [hidden]="nameEdit" (click)="editPerson(name.name)"><i class="fas fa-pen"></i></button>
-      <button class="btn btn-danger button-size button-margin" [hidden]="!nameEdit"><i class="fas fa-times"></i></button>
+      <button class="btn btn-danger button-size button-margin" [hidden]="!nameEdit"><i class="fas fa-times" (click)="cancelChange(name.name)"></i></button>
       <button class="btn btn-success button-size button-margin button-margin-right" [hidden]="!nameEdit" (click)="saveChage(name.name)" [disabled]="(name.value == '')"><i class="fas fa-check"></i></button>
     </div>
     <span>Curso</span>
@@ -50,7 +50,7 @@
       </select>
       <i [hidden]="!(course.value == 'default')" class="fas fa-exclamation-triangle required-icon"></i>
       <button class="btn btn-success button-size button-margin" [hidden]="courseEdit" (click)="editPerson(course.name)"><i class="fas fa-pen"></i></button>
-      <button class="btn btn-danger button-size button-margin" [hidden]="!courseEdit"><i class="fas fa-times"></i></button>
+      <button class="btn btn-danger button-size button-margin" [hidden]="!courseEdit"><i class="fas fa-times" (click)="cancelChange(course.name)"></i></button>
       <button class="btn btn-success button-size button-margin button-margin-right" [hidden]="!courseEdit" (click)="saveChage(course.name)" [disabled]="(course.value == 'default')"><i class="fas fa-check"></i></button>
     </div>
     <span>Senha</span>
@@ -64,7 +64,7 @@
       <div>
         <input [(ngModel)]="passConfirm" name="confirmPassword" #confirmPassword="ngModel" type="password" class="text-box-profile" placeholder="Digite a senha novamente">
         <i [hidden]="!(confirmPassword.value == '') || confirmPassword.pristine" class="fas fa-exclamation-triangle required-icon"></i>
-        <button class="btn btn-danger button-size button-margin"><i class="fas fa-times"></i></button>
+        <button class="btn btn-danger button-size button-margin"><i class="fas fa-times" (click)="cancelChange(password.name)"></i></button>
         <button class="btn btn-success button-size button-margin button-margin-right" (click)="saveChage(password.name)" [disabled]="(password.value == '' || confirmPassword.value == '')"><i class="fas fa-check"></i></button>
       </div>
     </div>

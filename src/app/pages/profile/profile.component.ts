@@ -43,7 +43,23 @@ export class ProfileComponent implements OnInit {
     private courseService: CourseService, ) {
     this.subscriptions.push(
       this.modalService.onHide.subscribe((reason: string) => {
-        this.cancelChange();
+        if (this.imageEdit) {
+          this.objPerson.image = this.imageTemp;
+          this.imageEdit = false;
+        }
+        if (this.nameEdit) {
+          this.objPerson.name = this.nameTemp;
+          this.nameEdit = false;
+        }
+        if (this.courseEdit) {
+          this.objPerson.course = this.courseTemp;
+          this.courseEdit = false;
+        }
+        if (this.passwordEdit) {
+          this.objPerson.password = this.PASS_CONST;
+          this.passConfirm = '';
+          this.passwordEdit = false;
+        }
       })
     );
   }
@@ -132,44 +148,48 @@ export class ProfileComponent implements OnInit {
     }
   }
 
-  cancelChange() {
-    if (this.imageEdit) {
-      this.objPerson.image = this.imageTemp;
-      this.imageEdit = false;
-    }
-    if (this.nameEdit) {
-      this.objPerson.name = this.nameTemp;
-      this.nameEdit = false;
-    }
-    if (this.courseEdit) {
-      this.objPerson.course = this.courseTemp;
-      this.courseEdit = false;
-    }
-    if (this.passwordEdit) {
-      this.objPerson.password = this.PASS_CONST;
-      this.passConfirm = '';
-      this.passwordEdit = false;
+  cancelChange(id: string) {
+    switch (id) {
+      case 'image':
+        this.objPerson.image = this.imageTemp;
+        this.imageEdit = false;
+        break;
+      case 'name':
+        this.objPerson.name = this.nameTemp;
+        this.nameEdit = false;
+        break;
+      case 'course':
+        this.objPerson.course = this.courseTemp;
+        this.courseEdit = false;
+        break;
+      case 'password':
+        this.objPerson.password = this.PASS_CONST;
+        this.passConfirm = '';
+        this.passwordEdit = false;
+        break;
+      default:
+        break;
     }
   }
 
-  ngOnInit() {
-    this.personService.getListPerson().subscribe(
-      listPerson => {
-        for (let person of listPerson) {
-          if (person.user == localStorage['login']) {
-            this.objPerson = person;
-            this.passDB = person.password;
-            this.objPerson.password = this.PASS_CONST;
-            return;
+    ngOnInit() {
+      this.personService.getListPerson().subscribe(
+        listPerson => {
+          for (let person of listPerson) {
+            if (person.user == localStorage['login']) {
+              this.objPerson = person;
+              this.passDB = person.password;
+              this.objPerson.password = this.PASS_CONST;
+              return;
+            }
           }
         }
-      }
-    );
-    this.courseService.getListCourse().subscribe(
-      list => {
-        this.listCourse = list;
-      }
-    )
-  }
+      );
+      this.courseService.getListCourse().subscribe(
+        list => {
+          this.listCourse = list;
+        }
+      )
+    }
 
-}
+  }

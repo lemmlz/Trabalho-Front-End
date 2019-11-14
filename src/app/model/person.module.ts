@@ -4,6 +4,7 @@ export class Person {
     public user: string
     public password: string
     public image: string
+    public id : number;
 
     constructor() {  }
   

@@ -3,12 +3,12 @@
     <img src="../../assets/img/logo.png">
     <a [routerLink]="['/home']">Suporte<br><span>FUMEC</span></a>
   </div>
-  <div class="profile border-sidebar">
-    <a [routerLink]="['/profile']">
+  <a [routerLink]="['/profile']" class="teste">
+    <div class="profile border-sidebar">
       <img [src]="personService.person.image" class="img-circle img-size">
       <span>{{personService.person.name}}</span>
-    </a>
-  </div>
+    </div>
+  </a>
   <nav>
     <ul class="links-sidebar-left">
       <a [routerLink]="['/notifications']"><li><i class="fas fa-bell"></i><span>Notificações</span></li></a>

@@ -3,7 +3,7 @@ import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { SidebarLeftService } from 'src/app/services/sidebar-left.service';
 import { PersonService } from 'src/app/services/person.service';
 import { Person } from 'src/app/model/person.module';
-import { CourseService } from 'src/app/services/course.service';
+import { ConstantsService } from 'src/app/services/constants.service';
 import { Course } from 'src/app/model/course.module';
 import { Subscription } from 'rxjs';
 
@@ -40,7 +40,7 @@ export class ProfileComponent implements OnInit {
     private sidebarLeftService: SidebarLeftService,
     private modalService: BsModalService,
     private personService: PersonService,
-    private courseService: CourseService, ) {
+    private constantService: ConstantsService, ) {
     this.subscriptions.push(
       this.modalService.onHide.subscribe((reason: string) => {
         if (this.imageEdit) {
@@ -185,7 +185,7 @@ export class ProfileComponent implements OnInit {
           }
         }
       );
-      this.courseService.getListCourse().subscribe(
+      this.constantService.getListCourse().subscribe(
         list => {
           this.listCourse = list;
         }

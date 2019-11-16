@@ -55,7 +55,7 @@ export class LoginComponent implements OnInit {
           if (person.user === this.objPerson.user && person.password === this.objPerson.password) {
               localStorage['token'] = 'xptoh26410x5=50';
               localStorage['login'] = person.user;
-              this.router.navigate(['/home']);
+              this.router.navigate(['/']);
               return;
           }
         }

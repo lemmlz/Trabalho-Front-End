@@ -20,7 +20,7 @@ export class SidebarLeftComponent implements OnInit {
   }
 
   ngOnInit() {
-
+    this.personService.setPerson();
   }
 
 }

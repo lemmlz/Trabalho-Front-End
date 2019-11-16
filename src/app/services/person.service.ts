@@ -19,7 +19,7 @@ export class PersonService {
     return environment.REQUEST_URL + 'person/';
   }
 
-  protected setPerson(){
+  setPerson(){
     this.getListPerson().subscribe(
       listPerson => {
         for (let p of listPerson) {

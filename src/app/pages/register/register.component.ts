@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ScreenService } from 'src/app/services/screen.service';
-import { CourseService } from 'src/app/services/course.service';
+import { ConstantsService } from 'src/app/services/constants.service';
 import { Course } from 'src/app/model/course.module';
 import { Person } from 'src/app/model/person.module';
 import { PersonService } from 'src/app/services/person.service';
@@ -101,19 +101,19 @@ export class RegisterComponent implements OnInit {
             this.personService.addPerson(this.objPerson);
             localStorage['token'] = 'xptoh26410x5=50';
             localStorage['login'] = this.objPerson.user;
-            this.router.navigate(['/home']);
+            this.router.navigate(['/']);
           }
         }
       );
     }
   }
 
-  constructor(private screenService: ScreenService, private courseService: CourseService, private personService : PersonService, private router : Router) {
+  constructor(private screenService: ScreenService, private constantService: ConstantsService, private personService : PersonService, private router : Router) {
     screenService.changeScreenLogin();
   }
 
   ngOnInit() {
-    this.courseService.getListCourse().subscribe(
+    this.constantService.getListCourse().subscribe(
       courses => {
         this.listCourse = courses;
       }

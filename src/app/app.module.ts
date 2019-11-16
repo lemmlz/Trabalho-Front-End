@@ -20,6 +20,7 @@ import { RegisterComponent } from './pages/register/register.component';
 import { NotificationsComponent } from './pages/notifications/notifications.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     ModalModule.forRoot(),
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    CommonModule
   ],
   providers: [SidebarLeftService, ScreenService],
   bootstrap: [AppComponent]

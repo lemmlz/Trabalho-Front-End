@@ -8,11 +8,11 @@
     </div>
     <div class="row justify-content-md-center featured_row">
       <div *ngFor="let pc of pcs" class="col-lg-3 spacing-pcs">
-        <a [routerLink]="['/computers']" (click)="openModal(report_modal); setComputer(pc)" class="font-computer">
+        <div (click)="openModal(report_modal); setComputer(pc)" class="font-computer">
           <div class="column-computer">
             {{pc}}
           </div>
-        </a>
+        </div>
       </div>
     </div>
   </div>

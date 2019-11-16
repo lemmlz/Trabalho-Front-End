@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Laboratory } from 'src/app/model/laboratory.module';
 import { SidebarLeftService } from 'src/app/services/sidebar-left.service';
 import { ScreenService } from 'src/app/services/screen.service';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ConstantsService } from 'src/app/services/constants.service';
 
 @Component({
   selector: 'app-laboratories',
@@ -10,38 +12,38 @@ import { ScreenService } from 'src/app/services/screen.service';
 })
 export class LaboratoriesComponent implements OnInit {
 
-  labs:Laboratory[] = [
-  {
-    name:"Laboratório 1",
-    number:"A201"
-  },
-  {
-    name:"Laboratório 2",
-    number:"A202"
-  },
-  {
-    name:"Laboratório 3",
-    number:"A203"
-  },
-  {
-    name:"Laboratório 4",
-    number:"A204"
-  },
-  {
-    name:"Laboratório 5",
-    number:"A205"
-  },
-  {
-    name:"Laboratório 6",
-    number:"A206"
-  }
-];
+  labs: Laboratory[] = [];
 
-  constructor(private sidebarLeftService : SidebarLeftService, private screenService : ScreenService) {
+  constructor(
+    private sidebarLeftService: SidebarLeftService,
+    private screenService: ScreenService,
+    private link: ActivatedRoute,
+    private constantsService: ConstantsService,
+    private router : Router
+  ) {
     screenService.changeScreenMain();
   }
 
   ngOnInit() {
+    this.constantsService.getListCollege().subscribe(
+      listColleges => {
+        this.link.params.subscribe(
+          res => {
+            for (let col of listColleges) {
+              if (col.name === res.college) {
+                return;
+              }
+            }
+            this.router.navigate(['/']);
+          }
+        );
+      }
+    );
+    this.constantsService.getListLaboratory().subscribe(
+      list => {
+        this.labs = list;
+      }
+    );
   }
 
 }

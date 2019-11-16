@@ -10,10 +10,9 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { AuthGuard } from './services/authentication.service';
 
 const routes: Routes = [
-  { path: '', pathMatch:'full', redirectTo: '/home' },
-  { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
-  { path: 'laboratories', component: LaboratoriesComponent, canActivate: [AuthGuard] },
-  { path: 'computers', component: ComputersComponent, canActivate: [AuthGuard] },
+  { path: '', component: HomeComponent, canActivate: [AuthGuard] },
+  { path: 'report/:college', component: LaboratoriesComponent, canActivate: [AuthGuard] },
+  { path: 'report/:college/:laboratory', component: ComputersComponent, canActivate: [AuthGuard] },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'notifications', component: NotificationsComponent, canActivate: [AuthGuard] },

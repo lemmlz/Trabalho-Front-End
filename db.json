@@ -1,4 +1,48 @@
 {
+  "college": [
+    {
+      "name":"FACE",
+      "image":"../../assets/img/face.jpg"
+    },
+    {
+      "name":"FEA",
+      "image":"../../assets/img/fea.jpg"
+    },
+    {
+      "name":"FCH",
+      "image":"../../assets/img/fch.jpg"
+    },
+    {
+      "name":"SEDE",
+      "image":"../../assets/img/sede.jpg"
+    }
+  ],
+  "laboratory":[ 
+    {
+      "name":"Laboratório 1",
+      "number":"201"
+    },
+    {
+      "name":"Laboratório 2",
+      "number":"202"
+    },
+    {
+      "name":"Laboratório 3",
+      "number":"203"
+    },
+    {
+      "name":"Laboratório 4",
+      "number":"204"
+    },
+    {
+      "name":"Laboratório 5",
+      "number":"205"
+    },
+    {
+      "name":"Laboratório 6",
+      "number":"206"
+    }
+  ],
   "course": [
     {
       "id": 1,
@@ -42,7 +86,7 @@
       "course": "Administração",
       "name": "Teste",
       "user": "teste",
-      "password": "fodas",
+      "password": "teste",
       "image": "../../assets/img/profile.jpg",
       "id": 2
     }

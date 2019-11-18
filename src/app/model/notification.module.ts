@@ -1,4 +1,5 @@
 export class NotificationComputers {
+    id:number;
     name:string;
     college:string;
     laboratory:string;

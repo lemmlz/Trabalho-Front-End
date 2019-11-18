@@ -10,7 +10,7 @@
         <li>
           <div class="notifications" (click)="changeStatusDropdown()">
             <i class="fas fa-bell notification-icon font-icon"></i>
-            <span>4</span>
+            <span>{{itemsLength}}</span>
           </div>
           <div class="dropdown">
                 <div class="dropdown-menu dropdown-notification" [ngClass]="{'dropdown-active': isDropdownActive}">
@@ -20,7 +20,7 @@
                     </div>
                     <div>
                       <div class="small date-item">{{item.date | date: 'dd/MM/yyyy'}} | {{item.date | date: 'hh'}}h {{item.date | date: 'mm'}}min</div>
-                      <span class="font-weight-bold">{{item.title}} | {{item.laboratory}} - {{item.computer}}</span>
+                      <span class="font-weight-bold">{{item.title}} | {{item.college}} - {{item.laboratory}} - {{item.computer}}</span>
                     </div>
                   </a>
                 </div>

@@ -11,11 +11,34 @@ import { NotificationsService } from 'src/app/services/notifications.service';
 })
 export class NotificationsComponent implements OnInit {
 
-  notifications: NotificationComputers[] = this.notificationsService.getNotifications;
+  notifications: NotificationComputers[] = [];
 
   constructor( private sidebarLeftService : SidebarLeftService, private notificationsService : NotificationsService) { }
 
+  changeStatus(id : number){
+    for(let objReport of this.notifications){
+      if (id === objReport.id) {
+        objReport.status = true;
+        this.notificationsService.updateReport(objReport);
+      }
+    }
+  }
+
+  deleteReport(id : number){
+    this.notificationsService.deleteReport(id);
+    this.notificationsService.getListReport().subscribe(
+      listReport => {
+        this.notifications = listReport;
+      }
+    );
+  }
+
   ngOnInit() {
+    this.notificationsService.getListReport().subscribe(
+      listReport => {
+        this.notifications = listReport;
+      }
+    )
   }
 
 }

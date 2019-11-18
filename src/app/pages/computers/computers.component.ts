@@ -66,9 +66,11 @@ export class ComputersComponent implements OnInit {
             this.objReport.status = false;
             this.notificationService.addReport(this.objReport);
             this.modalRef.hide();
-            alert('Problema cadastrado com sucesso!');
+            alert('Cadastrado com sucesso!');
+            return;
           }
         }
+        alert('Erro ao cadastrar!');
       }
     );
   }

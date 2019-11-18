@@ -12,7 +12,7 @@
         <div class="table-responsive">
           <table class="table table-property">
             <thead class="table-head"><tr>
-              <th>ID</th>
+              <th>Status</th>
               <th>Usuário</th>
               <th>Unidade</th>
               <th>Laboratório</th>
@@ -22,8 +22,11 @@
               <th>Descrição</th>
               <th>Ações</th>
             </tr></thead>
-            <tbody *ngFor="let not of notifications"><tr [ngStyle]="{'background-color' : not.bgColor}">
-              <td>{{not.id}}</td>
+            <tbody *ngFor="let not of notifications"><tr>
+              <td>
+                <i [hidden]="!not.status" class="fas fa-check-circle status success"></i>
+                <i [hidden]="not.status" class="fas fa-exclamation-circle status danger"></i>
+              </td>
               <td>{{not.name}}</td>
               <td>{{not.college}}</td>
               <td>{{not.laboratory}}</td>
@@ -32,8 +35,8 @@
               <td>{{not.title}}</td>
               <td>{{not.description}}</td>
               <td>
-                <button class="btn btn-success button-size button-margin"><i class="fas fa-pen"></i></button>
-                <button class="btn btn-danger button-size"><i class="fas fa-trash"></i></button>
+                <button [hidden]="not.status" (click)="changeStatus(not.id)" class="btn btn-success button-size button-margin"><i class="fas fa-check"></i></button>
+                <button class="btn btn-danger button-size button-margin" (click)="deleteReport(not.id)"><i class="fas fa-trash"></i></button>
               </td>
             </tr>
           </tbody></table>

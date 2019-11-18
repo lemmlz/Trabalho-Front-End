@@ -1,5 +1,4 @@
-export interface NotificationComputers {
-    id:number;
+export class NotificationComputers {
     name:string;
     college:string;
     laboratory:string;
@@ -7,5 +6,7 @@ export interface NotificationComputers {
     date:number;
     title:string;
     description:string;
-    bgColor:string;
+    status:boolean;
+
+    constructor(){}
 };

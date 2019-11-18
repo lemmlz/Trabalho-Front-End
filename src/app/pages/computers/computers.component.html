@@ -27,26 +27,28 @@
       <span aria-hidden="true">&times;</span>
     </button>
   </div>
-  <div class="modal-body">
-    <span>Título</span>
-    <div>
-      <input #title type="text" class="text-box-computer" placeholder="Digite o título">
-      <div class="required-account-access" id="titulo" [ngStyle]="{'display' : isEmptyTitle ? 'block' : 'none'}">
-        <span class="msg-required">Título Obrigatório</span>
-        <i class="fas fa-exclamation-triangle"></i>
+  <form (ngSubmit)="onSubmit()" #computerForm="ngForm">
+    <div class="modal-body">
+      <span>Título</span>
+      <div>
+        <input [(ngModel)]="objReport.title" maxlength="50" name="title" #title="ngModel" type="text" class="text-box-computer" placeholder="Digite o título" required>
+        <div class="required-account-access" id="titulo" [hidden]="title.valid || title.pristine">
+          <span class="msg-required">Título Obrigatório</span>
+          <i class="fas fa-exclamation-triangle"></i>
+        </div>
+      </div>
+      <span>Relate o problema</span>
+      <div>
+        <textarea [(ngModel)]="objReport.description" name="description" #description="ngModel" maxlength="140" class="text-area-computer" placeholder="Digite a descrição do problema" required></textarea>
+        <div class="required-account-access" id="descricao" [hidden]="description.valid || description.pristine">
+          <span class="msg-required">Descrição Obrigatório</span>
+          <i class="fas fa-exclamation-triangle"></i>
+        </div>
       </div>
     </div>
-    <span>Relate o problema</span>
-    <div>
-      <textarea #description maxlength="140" class="text-area-computer" placeholder="Digite a descrição do problema"></textarea>
-      <div class="required-account-access" id="descricao" [ngStyle]="{'display' : isEmptyDescription ? 'block' : 'none'}">
-        <span class="msg-required">Descrição Obrigatório</span>
-        <i class="fas fa-exclamation-triangle"></i>
-      </div>
+    <div class="modal-footer">
+      <input type="submit" class="btn btn-primary" [disabled]="!computerForm.form.valid" value="Salvar">
+      <button class="btn btn-cancel" (click)="modalRef.hide()">Cancelar</button>
     </div>
-  </div>
-  <div class="modal-footer">
-    <button class="btn btn-primary" (click)="checkAllField(title.value,description.value)">Salvar</button>
-    <button class="btn btn-cancel" (click)="modalRef.hide()">Cancelar</button>
-  </div>
+  </form>
 </ng-template>

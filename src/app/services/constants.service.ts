@@ -25,6 +25,10 @@ export class ConstantsService {
     return environment.REQUEST_URL + 'college/';
   }
 
+  protected getUrlComputer() : string {
+    return environment.REQUEST_URL + 'computer/';
+  }
+
   getListCourse(): Observable<Course[]>{
     return this.http.get<Course[]>(this.getUrlCourse());
   };
@@ -35,5 +39,9 @@ export class ConstantsService {
 
   getListCollege(): Observable<College[]>{
     return this.http.get<College[]>(this.getUrlCollege());
+  };
+
+  getListComputer(): Observable<string[]>{
+    return this.http.get<string[]>(this.getUrlComputer());
   };
 }

@@ -1,46 +1,91 @@
 {
-  "college": [
+  "report": [
     {
-      "name":"FACE",
-      "image":"../../assets/img/face.jpg"
+      "title": "qwd",
+      "description": "qwdwq",
+      "name": "Teste",
+      "college": "FACE",
+      "computer": "LI1001",
+      "laboratory": "201",
+      "date": 1574087356413,
+      "status": false,
+      "id": 1
     },
     {
-      "name":"FEA",
-      "image":"../../assets/img/fea.jpg"
+      "title": "wef",
+      "description": "wefwe",
+      "name": "Teste",
+      "college": "FACE",
+      "computer": "LI1001",
+      "laboratory": "201",
+      "date": 1574087390330,
+      "status": false,
+      "id": 2
     },
     {
-      "name":"FCH",
-      "image":"../../assets/img/fch.jpg"
-    },
-    {
-      "name":"SEDE",
-      "image":"../../assets/img/sede.jpg"
+      "title": "teste",
+      "description": "teste",
+      "name": "Teste",
+      "college": "SEDE",
+      "computer": "LI1008",
+      "laboratory": "205",
+      "date": 1574087591801,
+      "status": false,
+      "id": 3
     }
   ],
-  "laboratory":[ 
+  "computer": [
+    "LI1001",
+    "LI1002",
+    "LI1003",
+    "LI1004",
+    "LI1005",
+    "LI1006",
+    "LI1007",
+    "LI1008"
+  ],
+  "college": [
     {
-      "name":"Laboratório 1",
-      "number":"201"
+      "name": "FACE",
+      "image": "../../assets/img/face.jpg"
     },
     {
-      "name":"Laboratório 2",
-      "number":"202"
+      "name": "FEA",
+      "image": "../../assets/img/fea.jpg"
     },
     {
-      "name":"Laboratório 3",
-      "number":"203"
+      "name": "FCH",
+      "image": "../../assets/img/fch.jpg"
     },
     {
-      "name":"Laboratório 4",
-      "number":"204"
+      "name": "SEDE",
+      "image": "../../assets/img/sede.jpg"
+    }
+  ],
+  "laboratory": [
+    {
+      "name": "Laboratório 1",
+      "number": "201"
     },
     {
-      "name":"Laboratório 5",
-      "number":"205"
+      "name": "Laboratório 2",
+      "number": "202"
     },
     {
-      "name":"Laboratório 6",
-      "number":"206"
+      "name": "Laboratório 3",
+      "number": "203"
+    },
+    {
+      "name": "Laboratório 4",
+      "number": "204"
+    },
+    {
+      "name": "Laboratório 5",
+      "number": "205"
+    },
+    {
+      "name": "Laboratório 6",
+      "number": "206"
     }
   ],
   "course": [

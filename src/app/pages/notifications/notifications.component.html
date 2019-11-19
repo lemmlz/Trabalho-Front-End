@@ -22,7 +22,7 @@
               <th>Descrição</th>
               <th>Ações</th>
             </tr></thead>
-            <tbody *ngFor="let not of notifications"><tr>
+            <tbody *ngFor="let not of notificationsService.listReport"><tr [id]="not.id">
               <td>
                 <i [hidden]="!not.status" class="fas fa-check-circle status success"></i>
                 <i [hidden]="not.status" class="fas fa-exclamation-circle status danger"></i>

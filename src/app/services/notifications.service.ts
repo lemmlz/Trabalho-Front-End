@@ -9,25 +9,45 @@ import { Observable } from 'rxjs';
 })
 export class NotificationsService {
 
-  constructor(private http : HttpClient) { }
+  listReport : NotificationComputers[] = [];
+
+  constructor(private http : HttpClient) {
+    this.getListReport();
+   }
 
   protected getUrlReport() : string{
     return environment.REQUEST_URL + 'report/'
   }
 
-  getListReport() : Observable<NotificationComputers[]>{
-    return this.http.get<NotificationComputers[]>(this.getUrlReport());
+  getListReport(){
+    this.http.get<NotificationComputers[]>(this.getUrlReport()).subscribe(
+      list => {
+        this.listReport = list;
+      }
+    );
   }
 
   addReport(objReport : NotificationComputers){
-    this.http.post<NotificationComputers>(this.getUrlReport(), objReport).subscribe();
+    this.http.post<NotificationComputers>(this.getUrlReport(), objReport).subscribe(
+      res => {
+        this.getListReport();
+      }
+    );
   }
 
   updateReport(objReport : NotificationComputers){
-    this.http.put<NotificationComputers>(this.getUrlReport() + objReport.id, objReport).subscribe();
+    this.http.put<NotificationComputers>(this.getUrlReport() + objReport.id, objReport).subscribe(
+      res => {
+        this.getListReport();
+      }
+    );
   }
 
   deleteReport(id : number){
-    this.http.delete<NotificationComputers>(this.getUrlReport() + id).subscribe();
+    this.http.delete<NotificationComputers>(this.getUrlReport() + id).subscribe(
+      res => {
+        this.getListReport();
+      }
+    );
   }
 }

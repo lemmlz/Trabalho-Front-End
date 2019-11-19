@@ -13,9 +13,6 @@ export class HeaderComponent implements OnInit {
 
   isDropdownActive:boolean = false;
 
-  items : NotificationComputers[] = [];
-  itemsLength : number = 0;
-
   changeStatusDropdown(){
     this.isDropdownActive = !this.isDropdownActive;
   }
@@ -28,12 +25,6 @@ export class HeaderComponent implements OnInit {
   constructor(private sidebarLeftService : SidebarLeftService, private notificationsService : NotificationsService, private router : Router) { }
 
   ngOnInit() {
-    this.notificationsService.getListReport().subscribe(
-      listReport => {
-        this.items = listReport;
-        this.itemsLength = listReport.length;
-      }
-    );
   }
 
 }

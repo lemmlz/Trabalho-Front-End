@@ -16,10 +16,11 @@
                 <div class="dropdown-menu dropdown-notification" [ngClass]="{'dropdown-active': isDropdownActive}">
                   <a *ngFor="let item of notificationsService.listReport" [routerLink]="['/notifications']" (click)="changeStatusDropdown()"class="dropdown-item d-flex align-items-center dropitem-property">
                     <div class="mr-3">
-                      <i class="fas fa-exclamation-circle exclamation-icon"></i>
+                      <i [hidden]="item.status" class="fas fa-exclamation-circle status danger"></i>
+                      <i [hidden]="!item.status" class="fas fa-check-circle status success"></i>
                     </div>
                     <div>
-                      <div class="small date-item">{{item.date | date: 'dd/MM/yyyy'}} | {{item.date | date: 'hh'}}h {{item.date | date: 'mm'}}min</div>
+                      <div class="small date-item">{{item.date | date: 'dd/MM/yyyy'}} | {{item.date | date: 'HH'}}h {{item.date | date: 'mm'}}min</div>
                       <span class="font-weight-bold">{{item.title}} | {{item.college}} - {{item.laboratory}} - {{item.computer}}</span>
                     </div>
                   </a>

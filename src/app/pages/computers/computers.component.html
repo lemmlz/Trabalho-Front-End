@@ -48,7 +48,7 @@
     </div>
     <div class="modal-footer">
       <input type="submit" class="btn btn-primary" [disabled]="!computerForm.form.valid" value="Salvar">
-      <button class="btn btn-cancel" (click)="modalRef.hide()">Cancelar</button>
+      <input type="reset" class="btn btn-cancel" (click)="modalRef.hide()" value="Cancelar">
     </div>
   </form>
 </ng-template>

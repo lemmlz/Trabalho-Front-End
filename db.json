@@ -1,70 +1,103 @@
 {
   "report": [
     {
-      "title": "wgeghhregrwfvref refvef'",
-      "description": " we we ffwefergvreg  regvswefvesfv",
-      "name": "Teste",
-      "college": "FEA",
-      "computer": "LI1004",
-      "laboratory": "202",
-      "date": 1574167924675,
-      "status": false,
-      "id": 9
-    },
-    {
-      "title": "ergvregvregre gre",
-      "description": "regregregregegveg",
-      "name": "Teste",
-      "college": "SEDE",
-      "computer": "LI1007",
-      "laboratory": "203",
-      "date": 1574167957182,
-      "status": false,
-      "id": 10
-    },
-    {
-      "title": "gbrtgregregvrgvfrg",
-      "description": " gvdegegdegvreg",
-      "name": "Teste",
-      "college": "SEDE",
+      "title": "Monitor não liga",
+      "description": "Monitor não apresenta vídeo ",
+      "name": "Luiz",
+      "college": "FACE",
       "computer": "LI1001",
-      "laboratory": "203",
-      "date": 1574167962616,
-      "status": true,
-      "id": 11
-    },
-    {
-      "title": "egvreg",
-      "description": "gegeg",
-      "name": "Teste",
-      "college": "SEDE",
-      "computer": "LI1002",
-      "laboratory": "203",
-      "date": 1574167966501,
+      "laboratory": "201",
+      "date": 1575415149580,
       "status": false,
-      "id": 12
+      "id": 16
     },
     {
-      "title": "fdg",
-      "description": "sdfsd",
-      "name": "Teste",
+      "title": "Computador desligando sozinho",
+      "description": "Computador desliga e apresenta uma mensagem de superaquecimento. ",
+      "name": "Luiz",
+      "college": "FEA",
+      "computer": "LI1007",
+      "laboratory": "203",
+      "date": 1575415220759,
+      "status": false,
+      "id": 17
+    },
+    {
+      "title": "Computador desligando sozinho",
+      "description": "Computador desliga e apresenta uma mensagem de superaquecimento. ",
+      "name": "Luiz",
+      "college": "FEA",
+      "computer": "LI1007",
+      "laboratory": "203",
+      "date": 1575415222101,
+      "status": false,
+      "id": 18
+    },
+    {
+      "title": "Problema de conectividade",
+      "description": "Computador não apresenta rede.",
+      "name": "Luiz",
       "college": "SEDE",
       "computer": "LI1007",
-      "laboratory": "202",
-      "date": 1574254081332,
+      "laboratory": "206",
+      "date": 1575415283738,
       "status": false,
-      "id": 14
+      "id": 19
     },
     {
-      "title": "teste",
-      "description": "teste noite\n",
-      "name": "Teste",
-      "college": "FEA",
-      "computer": "LI1002",
-      "laboratory": "203",
-      "date": 1574375030743,
+      "title": "Mouse com defeito",
+      "description": "Botão esquerdo do mouse não funciona.",
+      "name": "Luiz",
+      "college": "FCH",
+      "computer": "LI1005",
+      "laboratory": "204",
+      "date": 1575415336225,
       "status": false,
-      "id": 15
+      "id": 20
+    },
+    {
+      "title": "Teclado quebrado",
+      "description": "Teclado esta sem a tecla \"K\"",
+      "name": "Luiz",
+      "college": "FCH",
+      "computer": "LI1008",
+      "laboratory": "204",
+      "date": 1575415390716,
+      "status": false,
+      "id": 21
+    },
+    {
+      "title": "Problemas com audio",
+      "description": "Computador não emite áudio algum.",
+      "name": "Lucas",
+      "college": "FCH",
+      "computer": "LI1006",
+      "laboratory": "202",
+      "date": 1575415459050,
+      "status": false,
+      "id": 22
+    },
+    {
+      "title": "Entrada USB",
+      "description": "Alguém colocou um chiclete na entrada USB.",
+      "name": "Lucas",
+      "college": "FEA",
+      "computer": "LI1005",
+      "laboratory": "205",
+      "date": 1575415494629,
+      "status": false,
+      "id": 23
+    },
+    {
+      "title": "Temperatura ",
+      "description": "Computador esta com cheiro de queimado.",
+      "name": "Lucas",
+      "college": "FCH",
+      "computer": "LI1004",
+      "laboratory": "203",
+      "date": 1575415535539,
+      "status": false,
+      "id": 24
     }
   ],
   "computer": [
@@ -167,6 +200,22 @@
       "password": "teste",
       "image": "../../assets/img/profile.jpg",
       "id": 2
+    },
+    {
+      "course": "Administração",
+      "name": "Luiz",
+      "user": "luiz",
+      "password": "123456",
+      "image": "../../assets/img/profile.jpg",
+      "id": 3
+    },
+    {
+      "course": "Arquitetura",
+      "name": "Lucas",
+      "user": "lucas",
+      "password": "12345",
+      "image": "../../assets/img/profile.jpg",
+      "id": 4
     }
   ]
 }

@@ -448,7 +448,8 @@ section
     color: #ffffff00;
     height: 50%;
     border: 0.5px solid #ffffff00;
-    user-select: none;
+	user-select: none;
+	cursor: default;
     transition: border 0.5s, color 0.5s, background-color 0.5s;
 }
 

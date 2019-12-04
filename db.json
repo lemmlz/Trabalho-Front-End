@@ -202,8 +202,8 @@
       "id": 2
     },
     {
-      "course": "Administração",
-      "name": "Luiz",
+      "course": "Ciência da Computação",
+      "name": "Luiz Eduardo",
       "user": "luiz",
       "password": "123456",
       "image": "../../assets/img/profile.jpg",
@@ -211,7 +211,7 @@
     },
     {
       "course": "Arquitetura",
-      "name": "Lucas",
+      "name": "Lucas Lima",
       "user": "lucas",
       "password": "12345",
       "image": "../../assets/img/profile.jpg",

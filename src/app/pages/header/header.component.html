@@ -14,7 +14,7 @@
           </div>
           <div class="dropdown">
                 <div class="dropdown-menu dropdown-notification" [ngClass]="{'dropdown-active': isDropdownActive}">
-                  <a *ngFor="let item of notificationsService.listReport" [routerLink]="['/notifications']" (click)="changeStatusDropdown()"class="dropdown-item d-flex align-items-center dropitem-property">
+                  <a *ngFor="let item of notificationsService.listReport.reverse()" [routerLink]="['/notifications']" (click)="changeStatusDropdown()"class="dropdown-item d-flex align-items-center dropitem-property">
                     <div class="mr-3">
                       <i [hidden]="item.status" class="fas fa-exclamation-circle status danger"></i>
                       <i [hidden]="!item.status" class="fas fa-check-circle status success"></i>
